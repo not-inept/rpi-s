@@ -33,26 +33,16 @@
 
 		<!-- TODO: Use PHP to generate buttons/panel -->
 		<div id="bottomPanel">
-
 			<div id="controls">
+			<?php if (isset($_SESSION['username'])): ?>
+				<?php 
+
+				?>
+			<?php else: ?>
 				<li class="controls">
-					control01
+					<a href="resources/auth/login.php">[ insert card ] to play</a>
 				</li>
-				<li class="controls">
-					control02
-				</li>
-				<li class="controls">
-					control03
-				</li>
-				<li class="controls">
-					control04
-				</li>
-				<li class="controls">
-					control05
-				</li>
-				<li class="controls">
-					control06
-				</li>
+			<?php endif; ?>
 			</div>
 
 			<div id="panelInfo">

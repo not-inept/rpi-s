@@ -3,7 +3,6 @@
 	session_start(); 
 	if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {
 	    session_unset(); 
-
 	    session_destroy();
 	  // end the session here
 	  $err = 'You have been logged out.';
