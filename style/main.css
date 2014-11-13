@@ -1,0 +1,98 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P|Gruppo);
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+  position: relative;
+  background-color: #888888;
+  font-family: 'Gruppo', cursive;
+}
+
+a {
+	color: black;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #606060;
+	text-decoration: underline; 
+}
+
+nav {
+	clear: both;
+	height: 50px;
+	background-color: white;
+	border-radius: 5px;
+	margin: 10px 0px;
+}
+
+nav ul {
+	float: right;
+}
+
+nav ul li {
+	float: right;
+	list-style-type: none;
+	padding: 15px;
+	font-size: 1.2em;
+}
+
+.container {
+	width: 1000px;
+	margin: 0px auto;
+}
+
+.title {
+	padding: 15px;
+	font-size: 1.5em;
+	display: inline-block;
+	font-family: 'Press Start 2P', cursive;
+}
+ 
+ .inline {
+ 	display: inline-block;
+ }
+
+.left {
+	width: 65%;
+	float: left;
+}
+
+.right {
+	width: 30%;
+	float: right;
+}
+
+.right .border {
+	border-radius: 10px;
+	border: 2px solid black;
+	margin-bottom: 10px;
+	padding: 10px;
+}
+
+.school {
+	min-height: 100px;
+	margin-right: 4.5%;
+	background-color: white;
+}
+
+#loginForm input {
+	width: 70%;
+	display: block;
+	font-size: 1em;
+	margin: 10px auto;
+}
+
+.news h2 {
+	border-bottom: 2px solid black;
+}
+
+#map {
+	height: 700px;
+	background-color: white;
+}
