@@ -24,11 +24,11 @@ except ImportError:                 # Version 2.7 or earlier
 import xml.etree.ElementTree as ET
 
 try:
-    import sql                      # importing python-sql library now
+    import                       # importing python-sql library now
 except ImportError:
     try:
-        print("The python-sql-0.4 library was not installed! Installing now.")
-        os.system("../resources/python-sql-0.4/setup.py install")
+        print("The library has not been installed! Installing now.")
+        os.system("")
     except:
         print("Something went terribly wrong in installing the sql library. I think human intervention is needed...")
         print("Program exited: unsuccessful library import.")
