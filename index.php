@@ -22,7 +22,7 @@
 				<input type="button" value="Sign Up"/>
 			</form>
 			<section class="news border">
-				<h2>News Events</h2>
+				<h2>News Events Test</h2>
 				<div id="events">
 				</div>
 			</section>
