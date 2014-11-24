@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>RPI Adventure Game</title>
+	<title>RPI Test-enture Game</title>
 	<link rel="stylesheet" href="style/main.css" type="text/css"/>
 </head>
 
