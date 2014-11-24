@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>RPI Test-enture Game</title>
+	<title>RPI Survival Game</title>
 	<link rel="stylesheet" href="style/main.css" type="text/css"/>
 </head>
 
@@ -22,7 +22,7 @@
 				<input type="button" value="Sign Up"/>
 			</form>
 			<section class="news border">
-				<h2>News Events Test</h2>
+				<h2>Morning Mail</h2>
 				<div id="events">
 				</div>
 			</section>
