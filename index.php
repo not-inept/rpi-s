@@ -22,7 +22,7 @@
 				<input type="button" value="Sign Up"/>
 			</form>
 			<section class="news border">
-				<h2>Morning Mail</h2>
+				<h2>Morning Mail Meh</h2>
 				<div id="events">
 				</div>
 			</section>
