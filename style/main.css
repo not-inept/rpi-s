@@ -86,30 +86,4 @@ nav ul li {
 	border: 2px solid #D0D0D0;
 	margin-bottom: 10px;
 	padding: 10px;
-<<<<<<< HEAD
-}
-
-.school {
-	min-height: 100px;
-	margin-right: 4.5%;
-	background-color: white;
-}
-
-#loginForm input {
-	width: 70%;
-	display: block;
-	font-size: 1em;
-	margin: 10px auto;
-}
-
-.news h2 {
-	border-bottom: 2px solid black;
-	text-align: center;
-}
-
-#map {
-	height: 700px;
-	background-color: white;
-=======
->>>>>>> maps
 }

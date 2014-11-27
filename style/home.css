@@ -7,6 +7,7 @@
 
 .news h2 {
 	border-bottom: 2px solid #D0D0D0;
+	text-align: center;
 }
 
 #map, #mapLayout {
