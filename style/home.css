@@ -88,7 +88,7 @@
 	display: none;
 	left: 10px;
 	top: 10px;
-	background-image: url('/images/back.png');
+	background-image: url('../images/back.png');
 	width: 75px;
 	text-align: right;
 	color: black;
