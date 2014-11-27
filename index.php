@@ -3,6 +3,7 @@
 <head>
 	<title>RPI Survival Game</title>
 	<link rel="stylesheet" href="style/main.css" type="text/css"/>
+	<link rel="stylesheet" href="style/home.css" type="text/css"/>
 </head>
 
 <body>
