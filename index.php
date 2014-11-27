@@ -11,6 +11,14 @@
 		
 		<section class="left inline">
 			<div id="map">
+				<div id="mapLayout">
+					<?php include 'resources/maps/map_0_0.php'; ?>
+				</div>
+				<span class="arrow backArrow">Main<br>Map</span>
+				<span class="arrow leftArrow"></span>
+				<span class="arrow rightArrow"></span>
+				<span class="arrow topArrow"></span>
+				<span class="arrow bottomArrow"></span>
 			</div>
 		</section>
 
