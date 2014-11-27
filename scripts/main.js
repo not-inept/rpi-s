@@ -1,17 +1,6 @@
 $(document).ready(function() {
 	var section = "main";
-	var row = 0;
-	var column = 0;
-	var zoomedIn = false;
-
-	function tableClicked() {
-		switch(section) {
-			case "main":
-				zoomedIn = true;
-				loadNewMap();
-				break;
-		}
-	}
+	var row = 0, column = 0;
 
 	function loadNewMap() {
 		var mapName = 'map_' + row + '_' + column;
@@ -30,11 +19,11 @@ $(document).ready(function() {
 	}
 
 	function determineArrows() {
-		if(zoomedIn) { $('.backArrow').fadeIn(300) } else { $('.backArrow').fadeOut(300); }
-		if(row > 1 && zoomedIn) { $('.topArrow').fadeIn(300) } else { $('.topArrow').fadeOut(300); }
-		if(row < 3 && zoomedIn) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
-		if(column > 1 && zoomedIn) { $('.leftArrow').fadeIn(300) } else { $('.leftArrow').fadeOut(300); }
-		if(column < 3 && zoomedIn) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
+		if(row != 0 && column != 0) { $('.backArrow').fadeIn(300) } else { $('.backArrow').fadeOut(300); }
+		if(row > 1) { $('.topArrow').fadeIn(300) } else { $('.topArrow').fadeOut(300); }
+		if(row > 0 && row < 3) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
+		if(column > 1) { $('.leftArrow').fadeIn(300) } else { $('.leftArrow').fadeOut(300); }
+		if(column > 0 && column < 3) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
 	}
 
 	$(document).on('click', '#mapLayout table td', function() {
@@ -47,15 +36,13 @@ $(document).ready(function() {
 		// get the value in the column attribute
 		column = $(this).data('column');
 
-		tableClicked();
+		loadNewMap();
 	});
 
 	$(document).on('click', '.backArrow', function(e) {
 		e.stopPropagation();
-		row = 0;
-		column = 0;
+		row = column = 0;
 		section = "main";
-		zoomedIn = false;
 
 		loadNewMap();
 	});
