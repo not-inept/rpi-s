@@ -3,6 +3,7 @@
 <head>
 	<title>RPI Survival Game</title>
 	<link rel="stylesheet" href="style/main.css" type="text/css"/>
+	<link rel="stylesheet" href="style/home.css" type="text/css"/>
 </head>
 
 <body>
@@ -11,6 +12,14 @@
 		
 		<section class="left inline">
 			<div id="map">
+				<div id="mapLayout">
+					<?php include 'resources/maps/map_0_0.php'; ?>
+				</div>
+				<span class="arrow backArrow">Main<br>Map</span>
+				<span class="arrow leftArrow"></span>
+				<span class="arrow rightArrow"></span>
+				<span class="arrow topArrow"></span>
+				<span class="arrow bottomArrow"></span>
 			</div>
 		</section>
 

@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Press+Start+2P|Gruppo);
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P|Ubuntu);
 
 * {
   margin: 0px;
@@ -6,11 +6,15 @@
   box-sizing: border-box;
 }
 
-html, body {
-  height: 100%;
+html {
+  min-height: 100%;
   position: relative;
   background-color: #888888;
-  font-family: 'Gruppo', cursive;
+  background-image: url('/images/background.jpg');
+  background-repeat:no-repeat;
+  background-position: top center;
+  background-size: cover;
+  font-family: 'Ubuntu', cursive;
 }
 
 a {
@@ -29,6 +33,7 @@ nav {
 	background-color: white;
 	border-radius: 5px;
 	margin: 10px 0px;
+	color: black;
 }
 
 nav ul {
@@ -45,6 +50,8 @@ nav ul li {
 .container {
 	width: 1000px;
 	margin: 0px auto;
+	color: #D0D0D0;
+	overflow: hidden;
 }
 
 .title {
@@ -71,13 +78,15 @@ nav ul li {
 .right {
 	width: 30%;
 	float: right;
+	color: #D0D0D0;
 }
 
-.right .border {
+.border {
 	border-radius: 10px;
-	border: 2px solid black;
+	border: 2px solid #D0D0D0;
 	margin-bottom: 10px;
 	padding: 10px;
+<<<<<<< HEAD
 }
 
 .school {
@@ -101,4 +110,6 @@ nav ul li {
 #map {
 	height: 700px;
 	background-color: white;
+=======
+>>>>>>> maps
 }
