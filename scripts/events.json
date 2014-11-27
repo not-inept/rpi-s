@@ -70,53 +70,5 @@
         "location": "empac", 
         "description": "Description: Terra Cafe's last lunch for the fall 2014 semester will feature Aussie Meat Pie, filled with your choice of lamb and beef or seitan, mixed with potatoes, carrots, peas, onions, and topped with gravy.  Each entree comes with drinks, a side salad, and dessert...all for only $7.00!", 
         "title": "Terra Cafe Serving Last Lunch for Fall Semester"
-    }, 
-    {
-        "date": "November 18, 2014 12:00 AM - November 25, 2014", 
-        "location": "empac", 
-        "description": "<p>Students from the HASS Inquiry course \"Worlds on Display\" present exhibits for their final projects examining Worlds Fairs and Expositions through the lenses of technology, futurism, design, architecture, anthropology, history and art.</p>", 
-        "title": "HASS Students to Present \"Expo 14: Worlds on Display\""
-    }, 
-    {
-        "date": "Friday,        November 21, 2014 7:30 AM          -        10:30 AM", 
-        "location": "cii", 
-        "description": "Description: Every Friday morning through Friday, December 5, Sigma Phi Epsilon will be selling bacon, egg, and cheese sandwiches for only $2. Sandwiches are cooked on location and are hot and ready to go for a fast breakfast on your way to or from class!", 
-        "title": "Breakfast Sandwich Sales to Benefit Big Brothers Big Sisters"
-    }, 
-    {
-        "date": "Friday,        December 5, 2014 7:30 AM          -        10:30 AM", 
-        "location": "cii", 
-        "description": "Description: Every Friday morning through Friday, December 5, Sigma Phi Epsilon will be selling bacon, egg, and cheese sandwiches for only $2. Sandwiches are cooked on location and are hot and ready to go for a fast breakfast on your way to or from class!", 
-        "title": "Breakfast Sandwich Sales to Benefit Big Brothers Big Sisters"
-    }, 
-    {
-        "date": "Tuesday,        November 25, 2014 4:00 PM          -        5:00 PM", 
-        "location": "cii", 
-        "description": "Description: The speaker is Dr. Nicole Immorlica from Microsoft Research New England, and the title of her talk is, \"Tilting at Windmills: The Economic Performance of Markets in the Wild.\"  Refreshments will be served at 3:30 p.m.", 
-        "title": "Computer Science Colloquium to be Held November 25"
-    }, 
-    {
-        "date": "Wednesday,        November 19, 2014 9:00 AM          -        3:00 PM", 
-        "location": "dcc", 
-        "description": "Description: All members of the campus community are welcome to stop by the DCC Great Hall and learn more about what the Rensselaer Center for Open Source (RCOS) students have accomplished this semester.  This is a great opportunity to see a variety of open source projects and tools, many of which are already available for use, as well as provide your input and feedback.  Live project demos throughout the day.  No RSVP required....just stop by!", 
-        "title": "RCOS Poster Session Slated for November 19"
-    }, 
-    {
-        "date": "Wednesday,        November 19, 2014 1:00 PM          -        2:00 PM", 
-        "location": "jec", 
-        "description": "Description: ** Regrettably, Dr. H. Michael Zhang's presentation, \"From Human Drivers to Robo Cars: Traffic Flow in the Era of Autonomous Vehicles,\" which was originally scheduled for Wednesday, November 19, has been cancelled. **", 
-        "title": "UPDATE: November 19 C & EE Seminar CANCELLED"
-    }, 
-    {
-        "date": "November 17, 2014 4:00 PM - 5:00 PM", 
-        "location": "sage lab", 
-        "description": "<p>Come hear game designers and visionaries Erin Hoffman and Paul Neurath reflect on games both commercial and applied in a revealing, provocative discussion of the game industry of yesterday, today and tomorrow.</p>", 
-        "title": "HASS Event, \"Two Paths. Two Experts. One Conversation,\" Scheduled for November 17"
-    }, 
-    {
-        "date": "Friday,        November 21, 2014           -        Fri          ,          December 5, 2014 (all day)", 
-        "location": "campus-wide", 
-        "description": "Description: Fall 2014 course evaluations are now open. Your feedback is very important to the Institute, its five schools, and their departments, so please complete evaluation surveys for all your courses!  Evaluations will be available through Friday, December 5, 2014.", 
-        "title": "Fall 2014 Student Course Evaluations Now Open"
     }
 ]

@@ -12,6 +12,7 @@ This python script is meant to retrieve, filter, and store morning mail-based ev
 # NOTE: This code is written for Python 2.7 and 3.4
 # NOTE: The print statements should be changed to outputs to a log file or something...
 import json
+from httplib import *
 
 try:                                # Compatibility check for python 3.4 vs 2.7
     from urllib.parse import *
@@ -34,7 +35,7 @@ data_output = []
 data = urlopen('http://morningmail.rpi.edu/rss').read()# Retrieve data in XML form
 root = ET.fromstring(data)          # Creates data tree with variable pointing to root from XML string
 i = 7
-upper_bound = 37
+upper_bound = 37                  # This is enough to read all available events
 while i < upper_bound:            # The first item is at index 7, all tags before are just 'fluff'
     while(1):
         try:
@@ -58,3 +59,11 @@ while i < upper_bound:            # The first item is at index 7, all tags befor
 json.dump(data_output,events,sort_keys = False,indent=4)
 #events.write(json.dumps(data_output))
 events.close()
+
+# now call the updateDB php script to add the new data:
+conn = HTTPConnection('localhost:80')
+conn.request("POST", "/scripts/updateDB.php")
+response = conn.getresponse()
+print(response.status)
+print(response.read())
+conn.close()
