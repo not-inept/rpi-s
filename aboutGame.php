@@ -18,7 +18,7 @@
     <p>Use the map to nagivate your way through RPI campus and the surrounding Troy area. The grid systems accurately displays the positions of buildings from all around campus. Use the zoom feature to access specific buildings and locations.</p>
 
     <h2>Explore Your Interests</h2>
-    <p>Explore your interests by joining student organizations virtually. RPI Union is home to over 175 amazing groups. Whether you hobbies lie in student government, multiculture, athletics, service, visual and performing arts, religion, professional and honor societies or greek life, RPI S can help you farmiliarize yourself with many different clubs.</p>
+    <p>Explore your interests by joining student organizations virtually. RPI Union is home to over 175 amazing groups. Whether you hobbies lie in student government, multiculture, athletics, service, visual and performing arts, religion, professional and honor societies or greek life, RPI S can help you familiarize yourself with many different clubs.</p>
 
     <h2>Stay Connected</h2>
     <p>With daily event updates dynamically created using RPI's own Morning Mail. RPI S keeps you updated on current and upcoming events that you might want to participate in both virtually and/or in real life.</p>
