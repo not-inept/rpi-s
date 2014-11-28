@@ -24,7 +24,4 @@
     <p>With daily event updates dynamically created using RPI's own Morning Mail. RPI S keeps you updated on current and upcoming events that you might want to participate in both virtually and/or in real life.</p>
   </div>
 </body>
-
-<!-- improves performance by moving script files to bottom -->
-<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
 </html>

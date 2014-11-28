@@ -32,7 +32,4 @@
 		<p><a href = "https://github.com/not-inept/rpi-s">On GitHub</a></p>
 	</div>
 </body>
-
-<!-- improves performance by moving script files to bottom -->
-<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
 </html>
