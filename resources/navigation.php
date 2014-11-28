@@ -5,7 +5,7 @@
 	</span>
 	<ul class = "navigation">		
 		<li>
-			<a href="" >About</a>
+			<a href="aboutGame.php" >About</a>
 		  	<ul>
 		    <li><a href="aboutGame.php">The Game</a></li>
 		    <li><a href="team.php">The Team</a></li>
