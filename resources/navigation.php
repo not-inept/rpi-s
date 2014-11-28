@@ -15,5 +15,5 @@
 		<li><a href="index.php">Home</a></li>
 	</ul>
 <script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="resources/aboutNavigation.js"></script>
+<script type="text/javascript" src="scripts/aboutNavigation.js"></script>
 </nav>
