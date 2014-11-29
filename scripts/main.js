@@ -1,5 +1,13 @@
 $(document).ready(function() {
-	var section = "main";
+	// these can be changed later :)
+	var locations = {
+		'MAIN' : 'main',
+		'LEGEND' : 'legend',
+		'ECAV' : 'ecav',
+		'ACADEMICS' : 'academics',
+		'DORMS' : 'dorms'
+	};
+	var section = locations.MAIN;
 	var row = 0, column = 0;
 	var maxRow = maxColumn = 2;
 	var zoomedIn = false;
@@ -26,6 +34,9 @@ $(document).ready(function() {
 		} else {
 			map.css('background-image', 'url(images/maps/' + mapName + '.png)');
 		}
+
+		determineSection();
+		determineArrows();
 	}
 
 	function determineArrows() {
@@ -34,6 +45,22 @@ $(document).ready(function() {
 		if(row > 0 && row < maxRow) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
 		if(column > 1) { $('.leftArrow').fadeIn(300) } else { $('.leftArrow').fadeOut(300); }
 		if(column > 0 && column < maxColumn) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
+	}
+
+	function determineSection() {
+		if(!zoomedIn) {
+			section = locations.MAIN;
+		} else {
+			if (row == 1 && column == 1) {
+				section = locations.LEGEND;
+			} else if(row == 1 && column == 2) {
+				section = locations.ECAV;
+			} else if(row == 2 && column == 1) {
+				section = locations.ACADEMICS;
+			} else {
+				section = locations.DORMS;
+			}
+		}
 	}
 
 	$(document).on('click', '#mapLayout table td', function() {
@@ -52,7 +79,7 @@ $(document).ready(function() {
 	$(document).on('click', '.backArrow', function(e) {
 		e.stopPropagation();
 		row = column = 0;
-		section = "main";
+		section = locations.MAIN;
 		zoomedIn = false;
 
 		loadNewMap();
@@ -71,7 +98,6 @@ $(document).ready(function() {
 			row += 1;
 		}
 
-		determineArrows();
 		loadNewMap();
 	});
 });
