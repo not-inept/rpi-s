@@ -8,7 +8,7 @@
     phpCAS::setCasServerCACert("./CACert.pem");//this is relative to the cas client.php file
     //phpCAS::setNoCasServerValidation();
     echo "Entering if....";
-    if (!phpCAS::checkAuthenticated())
+    if (!phpCAS::isAuthenticated())
     {
         echo "Auth = False...";
         phpCAS::forceAuthentication();
