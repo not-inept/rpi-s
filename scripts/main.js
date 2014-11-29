@@ -1,48 +1,59 @@
 $(document).ready(function() {
 	var section = "main";
 	var row = 0, column = 0;
+	var maxRow = maxColumn = 2;
+	var zoomedIn = false;
 
-	function loadNewMap() {
-		var mapName = 'map_' + row + '_' + column;
+	// versions to ensure correct image is loaded in the browser
+	var version = 1;
+	loadNewMap(false);
 
-		$.get('resources/maps/' + mapName + '.php', function(response) {
-			var map = $('#map');
+	function loadNewMap(fade) {
+		if(typeof fade === 'undefined') {
+			fade = true;
+		}
 
+		var mapName = 'map_' + row + '_' + column + '_' + version;
+		var map = $('#map');
+
+		if(fade) {
 			map.fadeOut(300, function() {
 				map.css('background-image', 'url(images/maps/' + mapName + '.png)');
-				$('#mapLayout').html(response);
 				map.fadeIn(300, function() {
 					determineArrows();
 				});
 			});
-		});
+		} else {
+			map.css('background-image', 'url(images/maps/' + mapName + '.png)');
+		}
 	}
 
 	function determineArrows() {
 		if(row != 0 && column != 0) { $('.backArrow').fadeIn(300) } else { $('.backArrow').fadeOut(300); }
 		if(row > 1) { $('.topArrow').fadeIn(300) } else { $('.topArrow').fadeOut(300); }
-		if(row > 0 && row < 3) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
+		if(row > 0 && row < maxRow) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
 		if(column > 1) { $('.leftArrow').fadeIn(300) } else { $('.leftArrow').fadeOut(300); }
-		if(column > 0 && column < 3) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
+		if(column > 0 && column < maxColumn) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
 	}
 
 	$(document).on('click', '#mapLayout table td', function() {
-		// find closest table header
-		section = $(this).closest("table").attr('id');
-
 		// find closest "tr" row tag
 		row = $(this).closest("tr").data('row');
 
 		// get the value in the column attribute
 		column = $(this).data('column');
 
-		loadNewMap();
+		if(!zoomedIn) {
+			zoomedIn = true;
+			loadNewMap();
+		}
 	});
 
 	$(document).on('click', '.backArrow', function(e) {
 		e.stopPropagation();
 		row = column = 0;
 		section = "main";
+		zoomedIn = false;
 
 		loadNewMap();
 	});
@@ -61,6 +72,6 @@ $(document).ready(function() {
 		}
 
 		determineArrows();
-		// loadNewMap();
+		loadNewMap();
 	});
 });
