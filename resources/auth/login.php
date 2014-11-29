@@ -8,6 +8,7 @@
     if (!phpCAS::isAuthenticated())
     {
         phpCAS::forceAuthentication();
+        echo phpCAS::getUser();
     }else{
         header('location: ../../index.php');
     }
