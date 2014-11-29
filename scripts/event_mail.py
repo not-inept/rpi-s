@@ -24,15 +24,15 @@ except ImportError:                 # Version 2.7 or earlier
 import xml.etree.ElementTree as ET
 
 def look_for_place(data):
-    months = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6, 'july':7, 'august':8, 'september':9, 'october':10, 'november': 11, 'december':12}
+    months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
     compare = ['armory','empac','russel sage dining hall','commons dining hall','jec','campus','cii','dcc','ecav','sage lab','cbis','chapel and cultural center','union']
 
     i = -1
-    for key in months:
-        if key in data[1][0].strip().lower():
+    for item in months:
+        if item in data[1][0].strip().lower():
             i = 0
             break
-        if key in data[1][1].strip().lower():
+        if item in data[1][1].strip().lower():
             i = 1
             break
     if i == -1:
@@ -40,7 +40,7 @@ def look_for_place(data):
 
     for place in compare:
         if place in data[2].lower():
-            return {'description':description,'title': title,'month': int(months[ data[1][i].strip().lower() ]), 'day':int(data[1][i+1].strip()), 'year':int(data[1][i+2].strip()), 'location': place}
+            return {'description':description,'title': title,'date': ' '.join(data[1][i:i+3]), 'location': place}
 
     raise Exception("Item not found...")
 

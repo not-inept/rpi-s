@@ -16,8 +16,17 @@ for ($i = 0; $i < count($feed); $i++){
 		':title' => $feed[$i]->{'title'},
 		':description' => $feed[$i]->{'description'},
 		':location' => $feed[$i]->{'location'},
-		':datestamp' => $feed[$i]->{'date'}
+		':datestamp' => strtotime($feed[$i]->{'date'}) + 3600
 		));
 	//echo nl2br($feed[$i]->{'title'}."\n\n");
 }
+
+// Now delete old events from events table:
+
+$cull_events = $dbconn->prepare('
+	DELETE FROM `events`
+	WHERE `date` < :current_time;');
+$cull_events->execute(array(
+	':current_time' => time()
+	));
 ?>
