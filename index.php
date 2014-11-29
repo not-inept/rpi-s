@@ -4,6 +4,7 @@
 
 
 <?php 
+	$ROOT = "";
 	require_once('./resources/includes/loadIncludes.php');
 	include_once('./resources/includes/header.php'); 
 ?>
