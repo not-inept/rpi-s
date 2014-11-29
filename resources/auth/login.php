@@ -8,10 +8,11 @@
     if (!phpCAS::isAuthenticated())
     {
         echo "Testing...";
-        echo phpCAS::getUser();
         phpCAS::forceAuthentication();
+        echo "What is going on...."
     }else{
         echo "Else..";
         header('location: ../../index.php');
     }
+    echo "Got to end";
 ?>
