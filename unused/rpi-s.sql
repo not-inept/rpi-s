@@ -66,7 +66,7 @@ CREATE TABLE IF NOT EXISTS `events` (
   `title` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `description` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
   `location` varchar(64) COLLATE utf8_unicode_ci NOT NULL,
-  `date` date NOT NULL,
+  `date` int NOT NULL,
   PRIMARY KEY (`title`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
