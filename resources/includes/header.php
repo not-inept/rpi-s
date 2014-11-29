@@ -33,7 +33,7 @@
 			</div>
 		<?php else: ?>
 			<div id="cardNone">
-				<a href="./auth/login.php">[ insert card ]</a>
+				<a href="resources/auth/login.php">[ insert card ]</a>
 			</div>
 		<?php endif; ?>
 		</div>
