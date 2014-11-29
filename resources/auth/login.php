@@ -7,9 +7,11 @@
     phpCAS::setNoCasServerValidation();
     if (!phpCAS::isAuthenticated())
     {
-        phpCAS::forceAuthentication();
+        echo "Testing...";
         echo phpCAS::getUser();
+        phpCAS::forceAuthentication();
     }else{
+        echo "Else..";
         header('location: ../../index.php');
     }
 ?>
