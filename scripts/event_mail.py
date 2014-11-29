@@ -24,10 +24,24 @@ except ImportError:                 # Version 2.7 or earlier
 import xml.etree.ElementTree as ET
 
 def look_for_place(data):
-    compare = ['armory','empac','russel sage dining hall','commons dining hall','jec','campus-wide','cii','dcc','ecav','sage lab','cbis','chapel and cultural center','union']
+    months = {'january':1, 'february':2, 'march':3, 'april':4, 'may':5, 'june':6, 'july':7, 'august':8, 'september':9, 'october':10, 'november': 11, 'december':12}
+    compare = ['armory','empac','russel sage dining hall','commons dining hall','jec','campus','cii','dcc','ecav','sage lab','cbis','chapel and cultural center','union']
+
+    i = -1
+    for key in months:
+        if key in data[1][0].strip().lower():
+            i = 0
+            break
+        if key in data[1][1].strip().lower():
+            i = 1
+            break
+    if i == -1:
+        raise Exception("Month not found...")
+
     for place in compare:
         if place in data[2].lower():
-            return {'description':description,'title': title,'date': date,'location': place}
+            return {'description':description,'title': title,'month': int(months[ data[1][i].strip().lower() ]), 'day':int(data[1][i+1].strip()), 'year':int(data[1][i+2].strip()), 'location': place}
+
     raise Exception("Item not found...")
 
 events = open('events.json', 'w')    # Output file
@@ -41,13 +55,14 @@ while i < upper_bound:            # The first item is at index 7, all tags befor
         try:
             details = root[0][i][2].text.split('<br/>') # parse description and get date & loc
             title = root[0][i][0].text                  # title of event
-            date = details[0].strip()                   # Date
+            date = details[0].strip().replace(',','').split()   # process Date
             location = details[1].strip()               # location
             description = details[2].strip()            # description
-
             data_output.append(look_for_place( (title, date, location, description) ))
             break
-        except:
+        except Exception as e:
+            print e
+            print 'incrementing!'
             i+=1
             upper_bound+=1
             if upper_bound > 1000:
@@ -57,7 +72,6 @@ while i < upper_bound:            # The first item is at index 7, all tags befor
         break
 
 json.dump(data_output,events,sort_keys = False,indent=4)
-#events.write(json.dumps(data_output))
 events.close()
 
 # now call the updateDB php script to add the new data:
