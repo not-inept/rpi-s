@@ -1,0 +1,252 @@
+@import url(http://fonts.googleapis.com/css?family=Press+Start+2P|Ubuntu|Anonymous+Pro);
+
+
+body {
+	background: url("terminal.png");
+	background-repeat:repeat;
+ 	background-position: top center;
+  	background-size: cover;
+  	font-family: 'Ubuntu', cursive;
+  	font-size: 15px;
+  	color: #FFFFFF;
+}
+
+a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #63C3FF;
+}
+
+h1 {
+	padding-top: none;
+	-webkit-margin-before: 0px;
+	-webkit-margin-after: 10px;
+	font-size: 22px;
+}
+
+img {
+	width: 370px;
+	height: 308px;
+}
+
+li.cardInfo {
+	list-style-type: none;
+	margin-bottom: 5px;
+}
+
+li.controls {
+	list-style-type: none;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-top: 15px;
+	padding-bottom: 15px;
+	text-align: center;
+	letter-spacing: 5px;
+}
+
+li.navigation {
+	display: inline-block;
+	padding: 0px;
+	margin-left: 15px;
+	margin-right: 15px;
+	letter-spacing: 5px;
+}
+
+#bottomPanel {
+	position: relative;
+	top: 310px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 740px;
+	height: 440px;
+	opacity: 0.8;
+}
+
+#card {
+	position: absolute;
+	left: 390px;
+	width:350px;
+	height: 200px;
+	border: 2px solid #FFFFFF;
+}
+
+#cardNone {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	letter-spacing: 5px;
+}
+
+#cardInfo {
+	position: absolute;
+	top: 50%;
+	transform: translate(0%,-50%);
+	width: 205px;
+	height: 170px;
+	margin-left: 15px;
+	margin-right: none;
+}
+
+#cardPic {
+	position: absolute;
+	top: 50%;
+	left: 235px;
+	transform: translate(0%,-50%);
+	width: 100px;
+	height: 100px;
+	margin-right: 15px;
+	background: #FFFFFF;
+}
+
+#controlMenu {
+	margin-left: auto;
+	margin-right: auto;
+	width: 740px;
+}
+
+#controls {
+	position: absolute;
+	top: 50%;
+	left: 0%;
+	transform: translate(0%,-50%);
+	width: 240px;
+	height: 390px;
+	padding: 25px;
+	border-left: 2px solid #FFFFFF;
+}
+
+#gameName {
+	position: absolute;
+	top: 80px;
+	left: -80px;
+	width: 200px;
+	height: 40px;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 40px;
+	transform: rotate(270deg);
+}
+
+#info {
+	position: relative;
+	top: 30px;
+	opacity: 0.8;
+	margin-left: auto;
+	margin-right: auto;
+	width: 740px;
+}
+
+#information {
+	/*background: #ff0000;*/
+	position: absolute;
+	top: 185px;
+	left: 485px;
+	height: 60px;
+	width: 440px;
+	padding-bottom: 10px;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+	font-size: 40px;
+	transform: rotate(90deg);
+}
+
+#location {
+	position: relative;
+	top: 270px;
+	background: #000000;
+	margin-left: auto;
+	margin-right: auto;
+	width: 700px;
+	padding: 10px;
+	padding-left: 30px;
+	font-family: 'Anonymous Pro';
+}
+
+#main {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#map {
+	position: relative;
+	top: 290px;
+	background: #000000;
+	margin-left: auto;
+	margin-right: auto;
+	width: 740px;
+	height: 616px;
+}
+
+#map1 {
+	position: absolute;
+	width: 370px;
+	height: 308px;
+}
+
+#map2 {
+	position: absolute;
+	left: 370px;
+	width: 370px;
+	height: 308px;
+}
+
+#map3 {
+	position: absolute;
+	top: 308px;
+	width: 370px;
+	height: 308px;
+}
+
+#map4 {
+	position: absolute;
+	top: 308px;
+	left: 370px;	
+	width: 370px;
+	height: 308px;
+}
+
+#navigation {
+	position: relative;
+	top: 253px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 720px;
+	text-align: center;
+	padding: 10px;
+	opacity: 0.8;
+}
+
+#news {
+	position: absolute;
+	left: 40px;
+	width:320px;
+	height: 170px;
+	padding: 15px;
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid #FFFFFF;
+}
+
+#newsFeed {
+	/**/
+}
+
+#panelInfo {
+	position: absolute;
+	left: 290px;
+	width: 330px;
+	height: 390px;
+	padding: 25px;
+	border-left: 2px solid #FFFFFF;
+	border-right: 2px solid #FFFFFF;
+}
+
+#panel1 {
+	margin-bottom: 40px;
+}
+
+

@@ -1,0 +1,74 @@
+[
+    {
+        "date": "November 22, 2014 7:30 PM - 9:00 PM", 
+        "location": "empac", 
+        "description": "<p>The Rensselaer Orchestra, under the direction of Nicholas DeMaison, presents its annual Fall concert.</p>", 
+        "title": "Rensselaer Orchestra Fall Concert Among Upcoming iEAR Events"
+    }, 
+    {
+        "date": "Friday,        December 12, 2014 7:30 PM          -        8:10 PM", 
+        "location": "empac", 
+        "description": "Description: Distinguished artist-in-residence Laurie Anderson presents a feature film in the form of a personal essay, with an original soundtrack of new music and a discussion following the screening.", 
+        "title": "Laurie Anderson to Present New Film at EMPAC"
+    }, 
+    {
+        "date": "Friday,        December 12, 2014 5:30 AM", 
+        "location": "union", 
+        "description": "Description:RPI-Sage Hillel will be hosting a shabbat dinner for the whole student and faculty community. The food is home-cooked and served at no cost, and newcomers are always welcome! Optional services start at 5:30pm; dinner starts at 6:00pm.", 
+        "title": "Hillel to Host Shabbat Dinner"
+    }, 
+    {
+        "date": "November 20, 2014 7:00 PM - November 21, 2014", 
+        "location": "cbis", 
+        "description": "<p>The first Music and Science presentation will take place at the CBIS auditorium from noon to 1:00 Nov. 20th featuring Shakir Khan demonstrating the practice of aural transmission in Guru/Shishya Parampara, the tradition and lineage of knowledge in Hindustani classical music.&#160;&#160;&#160; Khan will also perform a concert at CBIS Nov. 21st at 7:00 pm</p>", 
+        "title": "HASS, CBIS to Hold First \"Music and Science\" Presentation and Concert"
+    }, 
+    {
+        "date": "Wednesday,        December 3, 2014 10:30 AM          -        11:30 AM", 
+        "location": "dcc", 
+        "description": "Description: Dr. Tugrul Ozel of Rutgers University will present \"Integrated Physics Based Modeling and Multi-objective Optimization Approach for Micro-milling Titanium Alloy.\"", 
+        "title": "Dept. of MANE Colloquium Scheduled for December 3"
+    }, 
+    {
+        "date": "Wednesday,        December 10, 2014 1:00 PM          -        2:00 PM", 
+        "location": "jec", 
+        "description": "Description: Speaker Dr. Dominic Di Tori of NAE, will present \"Modern Models for Predicting Partitioning, Bioconcentration, and Toxicity of Organic Chemicals: The End of the Age of Octanol\"", 
+        "title": "C & EE Seminar to be Held December 10"
+    }, 
+    {
+        "date": "Friday, December 5, 2014 12:00 PM - 1:30 PM", 
+        "location": "dcc", 
+        "description": "Description: As part of their end-of-term celebration, student creative writers will be reading excerpts of their short story work.   This event is free and open to the public, and all are welcome to attend!  Refreshments will be served.", 
+        "title": "Student Writers to Mark End of Semester with Short Story Readings"
+    }, 
+    {
+        "date": "Tuesday,        December 9, 2014 9:00 AM          -        5:00 PM", 
+        "location": "union", 
+        "description": "Description: TIAA-CREF Individual Client Services Consultant Peter Crehan will be on campus for one-on-one consultations on a broad range of retirement topics. Attend this upcoming event to help you become better informed and more confident about Rensselaer's retirement plan benefits!", 
+        "title": "TIAA-CREF to Offer Confidential Retirement Counseling December 9"
+    }, 
+    {
+        "date": "Tuesday,        December 9, 2014 11:30 AM          -        1:00 PM", 
+        "location": "ecav", 
+        "description": "Description: President Shirley Ann Jackson invites all faculty, staff, and students to the Annual Campus Seasonal Celebration.  Lunch will be served.  Limited parking is available.", 
+        "title": "Annual Campus Seasonal Celebration to be Held December 9"
+    }, 
+    {
+        "date": "Thursday,        November 20, 2014 8:30 AM          -        5:00 PM", 
+        "location": "union", 
+        "description": "Description: With this week's Super November Special at the RPI Bookstore, you can get 30% off all winter hats this Thursday through Saturday.  Stay warm with their great selection of winter hats for men, women and children!", 
+        "title": "RPI Bookstore Continues Super November Specials"
+    }, 
+    {
+        "date": "Wednesday,        November 19, 2014 3:30 PM          -        5:00 PM", 
+        "location": "dcc", 
+        "description": "Description: Jim Kurose, of the Department of Computer Science at University of Massachusetts Amherst, will present \"Design and Analysis of Content Caching Networks.\" Refreshments will be served at 3:30 PM.", 
+        "title": "Douglas Mercer '77 ECSE Lecture Series Continues November 19"
+    }, 
+    {
+        "date": "Wednesday,        November 19, 2014 11:00 AM          -        2:30 PM", 
+        "location": "empac", 
+        "description": "Description: Terra Cafe's last lunch for the fall 2014 semester will feature Aussie Meat Pie, filled with your choice of lamb and beef or seitan, mixed with potatoes, carrots, peas, onions, and topped with gravy.  Each entree comes with drinks, a side salad, and dessert...all for only $7.00!", 
+        "title": "Terra Cafe Serving Last Lunch for Fall Semester"
+    }
+]

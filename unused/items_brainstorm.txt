@@ -1,0 +1,60 @@
+xbox controller (wired):
+	weak attack, high distraction effect
+
+nerf gun:
+	once useful in HVZ games, these have ben found to be surrisingly effective against undead opponents in reality. However, living opponents laugh in the face of a nerf barrage.
+
+
+massively oversized textbook:
+	Considering how heavy this thing is, one would hardly bother in carrying it.Unless it has some particular value...?
+
+hockey stick:
+	This weapon is used by the fearsome ice golems of ECAV bunker. Has particulary good damage against non-winter acclimated enemies.
+
+Abandoned musical instrument:
+	<Something>
+
+Hard drive platters:
+	Good throwing disks. Also shiny.
+
+Messenger Bag:
+	Slight increase in inventory space
+
+Standard backpack:
+	Increases user's inventory space at the cost of some speed and maneuverability
+
+Rolling backpack:
+	Allows player to carry large and heavu objects, but is less stealthy and maneuverable
+
+Kendo sword:
+	It's a sword!
+
+flip flops:
+	Minimal protection from rocky terrain. Slight increase in speed.
+
+Safety goggles:
+	They keep your eyes safe. Wear them.
+
+Marshmallow cannon:
+	Once a common shop class project, these devices have found new use in battle
+
+Running Shoes:
+	Quick speed, decent protection.
+
+Boots:
+	Good for fending off weather, but slighly slower than other footwear.
+
+Stale brownie:
+	Scavenged from one of the dining halls.
+
+bruised apple:
+	Not particularly appealing. Still, it is food...
+
+Ramen noodles:
+	A quick and unsatisfying snack. Oh well...
+
+Duct Tape:
+	Useful for repairing items of all kinds. Apples, backpacks, flesh wounds...
+
+iClicker:
+	These devices have been jerry-rigged into several different classes, ranging from light laser weapons to point-to-point communication devices.

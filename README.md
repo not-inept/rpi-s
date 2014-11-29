@@ -9,7 +9,7 @@ $config = array(
     'DB_HOST'     => '[YOUR DB HOST]',
     'DB_NAME'	  => '[YOUR DB NAME]',
     'DB_USERNAME' => '[YOUR DB USERNAME]',
-    'DB_PASSWORD' => '[YOUR DB PASSWORD]'
+    'DB_PASSWORD' => '[YOUR DB PASSWORD]',
 );
 
 ?>

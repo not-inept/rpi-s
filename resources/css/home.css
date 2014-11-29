@@ -1,0 +1,94 @@
+#loginForm input {
+	width: 70%;
+	display: block;
+	font-size: 1em;
+	margin: 10px auto;
+}
+
+.news h2 {
+	border-bottom: 2px solid #D0D0D0;
+	text-align: center;
+}
+
+#map, #mapLayout {
+	height: 650px;
+}
+
+#map {
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	position: relative;
+}
+
+#mapLayout table {
+	width: 100%;
+	height: 100%;
+	border-collapse: collapse;
+	cursor: pointer;
+}
+
+#mapLayout table td:before {
+	content: " ";
+}
+
+#mapLayout table td {
+	-webkit-transition-duration: 0.3s;
+  	transition-duration: 0.3s;
+}
+
+#mapLayout table td:hover {
+	background-color: rgba(123, 122, 111, 0.6);
+}
+
+.arrow {
+	position: absolute;
+	background-size: 32px 32px;
+	background-repeat: no-repeat;
+	height: 32px;
+	width: 32px;
+	cursor: pointer;
+}
+
+.leftArrow {
+	display: none;
+	left: 10px;
+	top: 50%;
+	background-image: url('../images/arrow.png');
+}
+
+.rightArrow {
+	display: none;
+	right: 10px;
+	top: 50%;
+	background-image: url('../images/arrow.png');
+	-webkit-transform: rotate(180deg);
+	transform: rotate(180deg);
+}
+
+.topArrow {
+	display: none;
+	left: 50%;
+	top: 10px;
+	background-image: url('../images/arrow.png');
+	-webkit-transform: rotate(90deg);
+	transform: rotate(90deg);
+}
+
+.bottomArrow {
+	display: none;
+	left: 50%;
+	bottom: 10px;
+	background-image: url('../images/arrow.png');
+	-webkit-transform: rotate(-90deg);
+	transform: rotate(-90deg);
+}
+
+.backArrow {
+	display: none;
+	left: 10px;
+	top: 10px;
+	background-image: url('../images/back.png');
+	width: 75px;
+	text-align: right;
+	color: black;
+}
