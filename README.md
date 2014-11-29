@@ -1,7 +1,7 @@
 #rpi-s
 A PHP/JS powered text based RPG that takes place on the campus.
 ###Usage/Installation
-First create a file called "config.php" of the format:
+First create a file "resources/includes/config.php" of the format:
 ````php
 <?php
 
