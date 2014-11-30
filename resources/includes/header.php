@@ -1,6 +1,7 @@
 <head>
 	<title>RPI-S</title>
 	<link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
+	<link rel="stylesheet" href="resources/css/home.css" type="text/css"/>
 </head>
 
 <header>
@@ -18,7 +19,7 @@
 		</div>
 
 		<div id="card">
-		<?php if (phpCAS::isAuthenticated()): ?>
+		<?php if (isset($_SESSION['username'])): ?>
 			<div id="cardInfo">
 				<h1>Player Info</h1>
 				<li class="cardInfo">Name: <?php echo phpCas::getUser(); ?></li>

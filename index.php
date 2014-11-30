@@ -5,35 +5,34 @@
 
 <?php 
 	$ROOT = "";
-	require_once('./resources/includes/loadIncludes.php');
+	require_once('./resources/includes/config.php');
 	include_once('./resources/includes/header.php'); 
 ?>
 
 
 <body>
 
-		<div id="map">
-			
-			<div id="map1">
-				<img scr="./map/1/1.png">
+		<section class="left inline">
+			<div id="map">
+				<div id="mapLayout">
+					<table>
+						<tr data-row="1">
+							<td data-column="1"></td>
+							<td data-column="2"></td>
+						</tr>
+						<tr data-row="2">
+							<td data-column="1"></td>
+							<td data-column="2"></td>
+						</tr>
+					</table>
+				</div>
+				<span class="arrow backArrow">Main<br>Map</span>
+				<span class="arrow leftArrow"></span>
+				<span class="arrow rightArrow"></span>
+				<span class="arrow topArrow"></span>
+				<span class="arrow bottomArrow"></span>
 			</div>
-
-			<div id="map2">
-				<img scr="../map/2/2.png">
-			</div>
-
-			<div id="map3">
-				<img scr="../map/3/3.png">
-			</div>
-
-			<div id="map4">
-				<img scr="../map/4/4.png">
-			</div>
-
-		</div>
-
-
-	</div>
+		</section>
 </body>
 
 

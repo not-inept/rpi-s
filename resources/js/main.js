@@ -26,13 +26,13 @@ $(document).ready(function() {
 
 		if(fade) {
 			map.fadeOut(300, function() {
-				map.css('background-image', 'url(images/maps/' + mapName + '.png)');
+				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
 				map.fadeIn(300, function() {
 					determineArrows();
 				});
 			});
 		} else {
-			map.css('background-image', 'url(images/maps/' + mapName + '.png)');
+			map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
 		}
 
 		determineSection();
