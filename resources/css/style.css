@@ -199,6 +199,7 @@ li.navigation {
 }
 
 #main {
+	z-index: -50;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
