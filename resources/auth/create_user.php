@@ -27,6 +27,7 @@
 				));
 				echo "User added.</p>";
 			} catch(PDOException $e) {
+				print_r($e);
 				echo "User not added.</p>";
 			}
 		}  catch(PDOException $e) {
