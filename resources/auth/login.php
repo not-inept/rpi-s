@@ -60,7 +60,8 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 <!doctype html>
 <html>
 <head>
-  <title>Login</title>
+  <title>RPI-S: login</title>
+  <link rel="stylesheet" href="../css/style.css" type="text/css"/>
 </head>
 <body>
 <?php if (isset($_SESSION['username'])): ?>
