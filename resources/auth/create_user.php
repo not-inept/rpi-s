@@ -1,6 +1,6 @@
 <?php
 	if (isset($_POST['username'])) {
-		require 'config.php';
+		require '../includes/config.php';
 
 		$name = $config['DB_NAME']; //DB We're using from config
 
