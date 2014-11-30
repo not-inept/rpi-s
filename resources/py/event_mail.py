@@ -76,7 +76,7 @@ events.close()
 
 # now call the updateDB php script to add the new data:
 conn = HTTPConnection('localhost:80')
-conn.request("POST", "/resources/py/updateDB.php")
+conn.request("POST", "rpi-s/resources/py/updateDB.php")
 response = conn.getresponse()
 print(response.status)
 print(response.read())

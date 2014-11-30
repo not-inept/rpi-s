@@ -4,7 +4,8 @@ RPI-SURVIVAL
 15 October 2014
 Web Systems Development
 Description:
-This python script is meant to retrieve, filter, and store morning mail-based events for the online RPI survival game.
+This python script is meant to list the locations found in 
+morning mail events and output how many times they appear.
 
 '''
 
