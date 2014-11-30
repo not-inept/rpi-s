@@ -10,10 +10,6 @@
 	text-align: center;
 }
 
-li{
-	list-style: none;
-}
-
 #map {
 	height: 650px;
 	background-repeat: no-repeat;

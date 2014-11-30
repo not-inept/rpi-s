@@ -4,7 +4,7 @@ $result = $dbconn->query('SELECT * FROM events WHERE quest = 0;');
 if ($result){
 	if ( $result->rowCount() != 0 ){
 		foreach ($dbconn->query('SELECT * FROM events WHERE quest = 0;') as $results){
-			echo '<li>>> '.$results['location'].'</li>';	
+			echo '<li>>> '.strtoupper($results['location']).': '.$results['title'].'</li>';	
 		}
 	} else {
 		echo '<li>>> Sorry, no events to show :\\</li>';

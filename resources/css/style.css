@@ -229,10 +229,11 @@ li.navigation {
 	padding: 15px;
 	border-top: 2px solid #FFFFFF;
 	border-bottom: 2px solid #FFFFFF;
+	overflow: auto;
 }
 
 #newsFeed {
-	/**/
+	list-style: none;
 }
 
 #panelInfo {

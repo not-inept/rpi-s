@@ -26,7 +26,7 @@
 
 		<div id="news">
 			<h1>Morning News</h1>
-			<div class="newsFeed">
+			<div id="newsFeed">
 				<?php
 					require 'config.php';
 					require 'connect.php';
