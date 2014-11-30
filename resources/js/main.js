@@ -75,6 +75,9 @@ $(document).ready(function() {
 		if(!zoomedIn) {
 			zoomedIn = true;
 			loadNewMap();
+		} else {
+			console.log("The row is " + row + " and the column is " + column + "\n");
+			//TODO: get quadrant and call areas.php?loc=quadrant,row,column
 		}
 	});
 

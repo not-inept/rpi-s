@@ -11,6 +11,7 @@
 		$faction = $_POST['faction'];
 		//TODO: Add email verification.
 		//TODO: Add user image choice.
+		//TODO: Add data santization.
 		try {
 		    $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
 		    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

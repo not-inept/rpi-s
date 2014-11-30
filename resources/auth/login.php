@@ -34,6 +34,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   if ($user = $login_stmt->fetch()) {
     $_SESSION['username'] = $user['name'];
     $_SESSION['id'] = $user['playerID'];
+    //TODO: Convert grade to string from grades table
     $_SESSION['grade'] = $user['grade'];
     //TODO: Convert faction to string from faction table
     $_SESSION['faction'] = $user['faction'];
