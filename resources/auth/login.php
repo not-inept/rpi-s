@@ -38,7 +38,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     $_SESSION['faction'] = $user['faction'];
     $_SESSION['exp'] = $user['exp'];
     $_SESSION['hp'] = $user['hp'];
-    $_SESSION['maxhp'] = $user['maxHP']
+    $_SESSION['maxhp'] = $user['maxHP'];
     header("Location: ../../index.php");
   }
   else {
