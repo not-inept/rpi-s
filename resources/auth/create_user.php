@@ -26,6 +26,7 @@
 					':faction' => $faction
 				));
 				echo "User added.</p>";
+				header('location: login.php');
 			} catch(PDOException $e) {
 				print_r($e);
 				echo "User not added.</p>";
