@@ -63,10 +63,7 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 </head>
 <body>
 <?php if (isset($_SESSION['username'])): ?>
-    <h1>Welcome, <?php echo htmlentities($_SESSION['username']) ?></h1>
-    <form method="post" action="index.php">
-        <input name="logout" type="submit" value="Logout" />
-    </form>
+  <?php header("Location: ../../index.php"); ?>
 <?php else: ?>
   <h1>Login</h1>
   <?php if (isset($err)) echo "<p>$err</p>" ?>
