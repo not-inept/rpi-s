@@ -1,20 +1,4 @@
-$user_chk = $dbconn->prepare('SELECT username FROM users WHERE username=:username');
-      $user_chk->execute(array(':username' => $_POST['username']));
- 
-      if ($user_chk->fetch()) {
-        $msg = "Duplicate username.";
-      }
-      else{
-        $stmt = $dbconn->prepare("INSERT INTO users (username, password, is_admin) 
-                          VALUES (:username, :pass, :isadmin)");
-        $stmt->execute(array(':username' => $_POST['username'], 
-                           ':pass' => $_POST['pass'],
-                           ':isadmin'=> $admin
-                            ));
-        $msg = "Account created.";
-      }
-
-      <?php
+<?php
   if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['faction'])) {
     require '../includes/config.php';
     $name = $config['DB_NAME']; //DB We're using from config
