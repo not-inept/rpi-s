@@ -15,6 +15,7 @@
 			<h1>Morning News</h1>
 			<div class="newsFeed">
 				<?php
+					require 'resources/includes/connect.php';
 					require 'resources/includes/classifieds.php';
 				?>
 			</div>
