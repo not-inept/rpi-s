@@ -9,5 +9,5 @@ try {
 catch (Exception $e) {
   echo "Error: " . $e->getMessage();
 }
-echo ">> SUCCESSFULLY CONNECTED!"
+//echo ">> SUCCESSFULLY CONNECTED!"
 ?>
