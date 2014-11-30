@@ -15,7 +15,7 @@
 			<h1>Morning News</h1>
 			<div class="newsFeed">
 				<?php
-					require $_SERVER['DOCUMENT_ROOT'].'/resources/includes/classifieds.php';
+					require 'resources/includes/classifieds.php';
 				?>
 			</div>
 		</div>
