@@ -20,21 +20,12 @@
 		<!-- TODO: Change map to individual image, allow navigation out -->
 		<div id="map">
 			
-			<div id="map1">
-				<img scr="../map/1/1.png">
-			</div>
-
-			<div id="map2">
-				<img scr="../map/2/2.png">
-			</div>
-
-			<div id="map3">
-				<img scr="../map/3/3.png">
-			</div>
-
-			<div id="map4">
-				<img scr="../map/4/4.png">
-			</div>
+		<?php
+			isset($_GET['loc']) {
+				//TODO: load image
+				print_r($_GET['loc']);
+			}
+		?>
 
 		</div>
 
