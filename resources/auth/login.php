@@ -35,6 +35,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     $_SESSION['username'] = $user['name'];
     $_SESSION['id'] = $user['playerID'];
     $_SESSION['grade'] = $user['grade'];
+    //TODO: Convert faction to string from faction table
     $_SESSION['faction'] = $user['faction'];
     $_SESSION['exp'] = $user['exp'];
     $_SESSION['hp'] = $user['hp'];
@@ -49,7 +50,6 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
 // Logout
 if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {
     session_unset(); 
-
     session_destroy();
   // end the session here
   $err = 'You have been logged out.';

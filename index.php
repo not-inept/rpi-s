@@ -6,9 +6,8 @@
 <?php 
 	$ROOT = "";
 	require_once('./resources/includes/config.php');
-	include_once('./resources/includes/header.php'); 
+	include_once('./resources/includes/header.php');
 ?>
-
 
 <body>
 	<section>

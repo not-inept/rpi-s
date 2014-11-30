@@ -1,4 +1,6 @@
 $(document).ready(function() {
+	//TODO: Have map lead to area.php
+
 	// these can be changed later :)
 	var locations = {
 		'MAIN' : 'main',

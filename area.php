@@ -17,7 +17,7 @@
 			include_once('./resources/includes/header.php'); 
 		?>
 
-
+		<!-- TODO: Change map to individual image, allow navigation out -->
 		<div id="map">
 			
 			<div id="map1">
@@ -38,7 +38,7 @@
 
 		</div>
 
-
+		<!-- TODO: Use PHP to generate buttons/panel -->
 		<div id="bottomPanel">
 
 			<div id="controls">

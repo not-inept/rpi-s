@@ -8,7 +8,7 @@
 		$password = $_POST['password'];
 		$email = $_POST['email'];
 		$faction = $_POST['faction'];
-
+		//TODO: Add email verification.
 		try {
 		    $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
 		    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
