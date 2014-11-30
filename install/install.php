@@ -1,14 +1,10 @@
 <?php
 
-
 require 'C:\Users\Daniel BC\Dropbox\Public\College\Websys\Term Project\rpi-s-master\resources\includes\config.php';
 
-
-$dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], 
-  	$config['DB_USERNAME'], $config['DB_PASSWORD']);
+$dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
 
 $stmt = $dbconn->prepare("
-
 	DROP TABLE IF EXISTS `areas`;
 	DROP TABLE IF EXISTS `enemies`;
 	DROP TABLE IF EXISTS `enemySpawn`;
@@ -111,7 +107,5 @@ $stmt = $dbconn->prepare("
 	MODIFY `playerID` int(11) NOT NULL AUTO_INCREMENT;
 	");
 
-
 	$stmt->execute();
-
 ?>
