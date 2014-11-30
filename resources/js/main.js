@@ -82,27 +82,34 @@ $(document).ready(function() {
 	});
 
 	$(document).on('click', '.backArrow', function(e) {
-		e.stopPropagation();
-		row = column = 0;
-		section = locations.MAIN;
-		zoomedIn = false;
+		if(zoomedIn) {
+			e.stopPropagation();
+			row = column = 0;
+			section = locations.MAIN;
+			zoomedIn = false;
 
-		loadNewMap();
+			loadNewMap();
+		}
 	});
 
 	$(document).on('click', '.arrow', function() {
 		var arrow = $(this);
+		var isValid = true;
 
-		if(arrow.hasClass('leftArrow')) {
+		if(column > 1 && arrow.hasClass('leftArrow')) {
 			column -= 1;
-		} else if(arrow.hasClass('rightArrow')) {
+		} else if(column < 2 && arrow.hasClass('rightArrow')) {
 			column += 1;
-		} else if(arrow.hasClass('topArrow')) {
+		} else if(row > 1 && arrow.hasClass('topArrow')) {
 			row -= 1;
-		} else if(arrow.hasClass('bottomArrow')) {
+		} else if(row < 2 && arrow.hasClass('bottomArrow')) {
 			row += 1;
+		} else {
+			isValid = false;
 		}
 
-		loadNewMap();
+		if(isValid) {
+			loadNewMap();
+		}
 	});
 });
