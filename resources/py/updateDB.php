@@ -1,6 +1,6 @@
 <?php
 // This php script will push json data to the database:
-require $_SERVER['DOCUMENT_ROOT'].'/resources/includes/connect.php';
+require '../includes/connect.php';
 // Import json file and read it in:
 $file = file_get_contents('events.json');
 $feed = json_decode($file);
