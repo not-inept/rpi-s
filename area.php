@@ -3,19 +3,15 @@
 <html>
 
 
-<head>
-	<title>RPI-S</title>
-	<link rel="stylesheet" href="style/style.css" type="text/css"/>
-</head>
-
+<?php
+	$ROOT = "";
+	require_once('./resources/includes/config.php');
+	include_once('./resources/includes/header.php'); 
+?>
 
 <body>
 	<div id="main">
-		<?php
-			$ROOT = "";
-			require_once('./resources/includes/config.php');
-			include_once('./resources/includes/header.php'); 
-		?>
+
 
 		<!-- TODO: Change map to individual image, allow navigation out -->
 		<div id="map">
@@ -76,10 +72,5 @@
 
 	</div>
 </body>
-
-
-<!-- improves performance by moving script files to bottom -->
-<script type="text/javascript" src="scripts/jquery-2.1.1.min.js"></script>
-<script type="text/javascript" src="scripts/main.js"></script>
 
 </html>
