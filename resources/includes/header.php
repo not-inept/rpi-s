@@ -17,7 +17,9 @@
 			<h1>Morning News</h1>
 			<div class="newsFeed">
 				<?php
-					//require 'resources/includes/classifieds.php';
+					require 'config.php';
+					require 'connect.php';
+					require 'classifieds.php';
 				?>
 			</div>
 		</div>
