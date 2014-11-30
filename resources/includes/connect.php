@@ -1,6 +1,7 @@
 <?php
-// Connect to the database
-require 'resources/includes/config.php';
+// Connect to the database:
+// NOTE: The php script that requires this file
+// must also require the file containing $config (array)
 try {
   $dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], 
   	$config['DB_USERNAME'], $config['DB_PASSWORD']);
