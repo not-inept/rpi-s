@@ -69,10 +69,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $factions = $pdo->prepare('SELECT `factionID`,`factionName`,`description` FROM `factions` ORDER BY `factionID`');
         $factions->execute();
-        $result = $factions-fetchAll();
+        $result = $factions->fetchAll();
         foreach ($result as $faction) {
             if ($faction['factionID'] != -1) {
-                print_r($faction);
                 echo "</br>";
                 echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>".$faction["factionName"];
                 echo "<p>".$faction['description']."</p>";

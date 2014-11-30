@@ -18,9 +18,11 @@
 		<div id="map">
 			
 		<?php
-			if (isset($_GET['loc'])) {
-				//TODO: load image
-				print_r(explode(",",$_GET['loc']));
+			if (isset($_GET['loc'])) {				
+				$loc = explode(",",$_GET['loc']));
+				echo "<img src='resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png'>";
+			} else {
+				echo "Not a valid location! D:";
 			}
 		?>
 
@@ -30,7 +32,7 @@
 		<div id="bottomPanel">
 
 			<div id="controls">
-				<?php if (isset($_SESSION))
+				<?php if (isset($_SESSION['username'])): ?>
 				<li class="controls">
 					control01
 				</li>
