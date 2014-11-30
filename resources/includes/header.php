@@ -14,7 +14,9 @@
 		<div id="news">
 			<h1>Morning News</h1>
 			<div class="newsFeed">
-				Insert News Stream here
+				<?php
+					require $_SERVER['DOCUMENT_ROOT'].'/resources/includes/classifieds.php';
+				?>
 			</div>
 		</div>
 
