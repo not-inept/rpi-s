@@ -1,6 +1,6 @@
 <?php
 // Connect to the database
-require_once('config.php');
+require 'resources/includes/config.php';
 try {
   $dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], 
   	$config['DB_USERNAME'], $config['DB_PASSWORD']);
