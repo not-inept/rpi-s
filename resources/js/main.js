@@ -23,6 +23,7 @@ $(document).ready(function() {
 
 		var mapName = 'map_' + row + '_' + column + '_' + version;
 		var map = $('#map');
+		$('#location').html(mapName);
 
 		if(fade) {
 			map.fadeOut(300, function() {

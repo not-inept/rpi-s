@@ -22,12 +22,11 @@
 		<?php if (isset($_SESSION['username'])): ?>
 			<div id="cardInfo">
 				<h1>Player Info</h1>
-				<li class="cardInfo">Name: <?php echo phpCas::getUser(); ?></li>
-				<li class="cardInfo">Faction: ITWS</li>
-				<li class="cardInfo">Level: 9001</li>
-				<li class="cardInfo">HP: 70%</li>
-				<li class="cardInfo">EXP: 500/1000</li>
-				<li class="cardInfo">Status: stressed from finals </li>
+				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username'] ?></li>
+				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction'] ?></li>
+				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp'] ?></li>
+				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade'] ?> </li>
+				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp'] ?></li>
 			</div>
 			<div id="cardPic">
 				picture
@@ -59,6 +58,6 @@
 
 
 	<div id="location">
-		Directory: Main_Map/Quadrant_01/Quadrant_01_01
+		git pul@rpi-s: err: COULD NOT MOUNT DISK, ENABLE JS
 	</div>
 </header>

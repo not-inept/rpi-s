@@ -1,7 +1,7 @@
 <?php
 session_start();
 
-require 'config.php';
+require '../includes/config.php';
 // Connect to the database
 try {
   $dbname = $config['DB_NAME'];
@@ -18,7 +18,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
 
 // check user with the salt
 
-  $salt_stmt = $dbconn->prepare('SELECT allnaturalseasalt FROM users WHERE username=:username');
+  $salt_stmt = $dbconn->prepare('SELECT allnaturalseasalt FROM players WHERE name=:username');
   $salt_stmt->execute(array(':username' => $_POST['username']));
   $res = $salt_stmt->fetch();
   $salt = ($res) ? $res['allnaturalseasalt'] : '';
@@ -26,14 +26,17 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   $salted = hash('sha256', $salt.$_POST['pass']);
   echo $salted;
 
-  $login_stmt = $dbconn->prepare('SELECT username, id, is_admin FROM users WHERE username=:username AND password=:pass');
+  $login_stmt = $dbconn->prepare('SELECT id, name, faction, grade, exp, hp   FROM players WHERE name=:username AND password=:pass');
   $login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
   
   
   if ($user = $login_stmt->fetch()) {
-    $_SESSION['username'] = $user['username'];
+    $_SESSION['username'] = $user['name'];
     $_SESSION['id'] = $user['id'];
-    $_SESSION['is_admin'] = $user['is_admin'];
+    $_SESSION['grade'] = $user['grade'];
+    $_SESSION['faction'] = $user['faction'];
+    $_SESSION['exp'] = $user['exp'];
+    $_SESSION['hp'] = $user['hp'];
   }
   else {
     $err = 'Incorrect username or password.';
@@ -61,16 +64,17 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
     <form method="post" action="index.php">
         <input name="logout" type="submit" value="Logout" />
     </form>
-    <form method="post" action="content_entry.php">
-        <input name="addUser" type="submit" value="Add User" />
-    </form>
 <?php else: ?>
   <h1>Login</h1>
   <?php if (isset($err)) echo "<p>$err</p>" ?>
-  <form method="post" action="index.php">
+  <form method="post" action="login.php">
     <label for="username">Username: </label><input type="name" name="username" />
     <label for="pass">Password: </label><input type="password" name="pass" />
     <input name="login" type="submit" value="Login" />
+  </form>
+  <h1>Or ceate user</h1>
+  <form method="post" action="create_user.php">
+    <input name="create" type="submit" value="Create New User" />
   </form>
 <?php endif; ?>
 </body>
