@@ -48,3 +48,10 @@
 			</form>";
 	}	
 ?>
+ <html>
+ <head>
+ 	<title>RPI-S: create user</title>
+ 	<link rel="stylesheet" href="../css/style.css" type="text/css"/>
+ </head>
+ 
+ </html>
