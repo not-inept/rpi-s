@@ -5,8 +5,8 @@
     echo "CAS files loaded...";
     phpCAS::client(CAS_VERSION_2_0,'cas-auth.rpi.edu',443,'/cas/');
     // SSL!
-    phpCAS::setCasServerCACert("./CACert.pem");//this is relative to the cas client.php file
-   //phpCAS::setNoCasServerValidation();
+    //phpCAS::setCasServerCACert("./CACert.pem");//this is relative to the cas client.php file
+   phpCAS::setNoCasServerValidation();
     echo "Entering if....";
     if (!phpCAS::isAuthenticated())
     {
