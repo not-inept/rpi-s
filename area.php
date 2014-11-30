@@ -2,10 +2,8 @@
 
 <html>
 
-
 <?php
 	session_start();
-	$ROOT = "";
 	require_once('./resources/includes/config.php');
 	include_once('./resources/includes/header.php'); 
 ?>
@@ -13,26 +11,27 @@
 <body>
 	<div id="main">
 
-
 		<!-- TODO: Change map to individual image, allow navigation out -->
-		<div id="map">
+		<!-- Div closed in php, setting image as background -->
 			
 		<?php
+			$mapString = "<div id='map'";
 			if (isset($_GET['loc'])) {				
-				$loc = explode(",",$_GET['loc']));
-				echo "<img src='resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png'>";
+				$loc = explode(",",$_GET['loc']);
+				echo print_R($loc);
+				$mapString += " style='background-image: url(resources/images/maps/";
+				$mapString += string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
-				echo "Not a valid location! D:";
+				$mapString += ">Not a valid location! D:";
 			}
+			$mapString += "</div>";
+			echo $mapString;
 		?>
-
-		</div>
 
 		<!-- TODO: Use PHP to generate buttons/panel -->
 		<div id="bottomPanel">
 
 			<div id="controls">
-				<?php if (isset($_SESSION['username'])): ?>
 				<li class="controls">
 					control01
 				</li>
