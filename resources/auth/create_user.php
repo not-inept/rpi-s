@@ -34,7 +34,7 @@
 		}
 	} else {
 		echo "
-			<form id='newUser' name='newUser' action='user_entry.php' method='post'>
+			<form id='newUser' name='newUser' action='create_user.php' method='post'>
 			<label for='username'>Username:</label>
 			<input type='name' id='username' name='username'>
 			<label for='password'>Password:</label>
