@@ -35,23 +35,30 @@
 		}
 	} else {
 		echo "
-			<form id='newUser' name='newUser' action='create_user.php' method='post'>
-			<label for='username'>Username:</label>
-			<input type='name' id='username' name='username'>
-			<label for='password'>Password:</label>
-			<input type='password' id='password' name='password'>
-			<label for='email'>Email:</label>
-			<input type='email' id='email' name='email'>
-			<label for='faction'>Faction:</label>
-			<input type='faction' id='faction' name='faction'>
-			<input type='submit' value='Create User'>
-			</form>";
+			<html>
+ 			<head>
+ 				<title>RPI-S: create user</title>
+ 				<link rel='stylesheet' href='../css/style.css' type='text/css'/>
+ 			</head>
+				<form id='newUser' name='newUser' action='create_user.php' method='post'>
+					<p>
+						<label for='username'>Username:</label>
+						<input type='name' id='username' name='username'>
+					</p>
+					<p>
+						<label for='password'>Password:</label>
+						<input type='password' id='password' name='password'>
+					</p>
+					<p>
+						<label for='email'>Email:</label>
+						<input type='email' id='email' name='email'>
+					</p>
+					<p>
+						<label for='faction'>Faction:</label>
+						<input type='faction' id='faction' name='faction'>
+					<p>
+					<p><input type='submit' value='Create User'></p>
+				</form>
+			</html>";
 	}	
 ?>
- <html>
- <head>
- 	<title>RPI-S: create user</title>
- 	<link rel="stylesheet" href="../css/style.css" type="text/css"/>
- </head>
- 
- </html>
