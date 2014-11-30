@@ -75,9 +75,11 @@ json.dump(data_output,events,sort_keys = False,indent=4)
 events.close()
 
 # now call the updateDB php script to add the new data:
-conn = HTTPConnection('localhost:80')
-conn.request("POST", "rpi-s/resources/py/updateDB.php")
+data = urlopen('http://localhost/rpi-s/resources/py/updateDB.php').read()# Retrieve data in XML form
+'''conn = HTTPConnection('localhost/rpi-s/resources/py/updateDB.php', 80)
+conn.request("POST", '')
 response = conn.getresponse()
 print(response.status)
 print(response.read())
-conn.close()
+conn.close()'''
+print data
