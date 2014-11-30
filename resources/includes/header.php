@@ -39,11 +39,11 @@
 		<?php if (isset($_SESSION['username'])): ?>
 			<div id="cardInfo">
 				<h1>Player Info</h1>
-				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username'] ?></li>
-				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction'] ?></li>
-				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp'] ?></li>
-				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade'] ?> </li>
-				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp'] ?></li>
+				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username']; ?></li>
+				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction']; ?></li>
+				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp']; ?> / <?php echo $_SESSION['maxhp']; ?></li>
+				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade']; ?> </li>
+				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp']; ?></li>
 				<form method="post" action="index.php">
         			<input name="logout" type="submit" value="Logout" />
     			</form>

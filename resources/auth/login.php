@@ -27,7 +27,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   echo $salted;
   echo $_POST['username'];
   echo $_POST['pass'];
-  $login_stmt = $dbconn->prepare('SELECT playerID, name, faction, grade, exp, hp   FROM players WHERE name=:username AND password=:pass');
+  $login_stmt = $dbconn->prepare('SELECT playerID, name, faction, grade, exp, hp, maxhp   FROM players WHERE name=:username AND password=:pass');
   $login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
   
   
@@ -38,6 +38,8 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     $_SESSION['faction'] = $user['faction'];
     $_SESSION['exp'] = $user['exp'];
     $_SESSION['hp'] = $user['hp'];
+    $_SESSION['maxhp'] = $user['maxHP']
+    header("Location: ../../index.php");
   }
   else {
     $err = 'Incorrect username or password.';
