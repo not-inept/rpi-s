@@ -1,6 +1,5 @@
 <?php
-	if (isset($_POST['username'])) {
-		//TODO: Apply styling to create_user.php
+	if  if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && empty($_POST['username']) && empty($_POST['password']) && empty($_POST['email']) && empty($_POST['faction'])) {
 		require '../includes/config.php';
 
 		$name = $config['DB_NAME']; //DB We're using from config
@@ -10,8 +9,6 @@
 		$email = $_POST['email'];
 		$faction = $_POST['faction'];
 		//TODO: Add email verification.
-		//TODO: Add user image choice.
-		//TODO: Add data santization.
 		try {
 		    $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
 		    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
