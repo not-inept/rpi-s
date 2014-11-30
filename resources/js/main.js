@@ -27,24 +27,23 @@ $(document).ready(function() {
 		if(fade) {
 			map.fadeOut(300, function() {
 				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
-				map.fadeIn(300, function() {
-					determineArrows();
-				});
+				determineArrows();
+				determineSection();
+				map.fadeIn(300)
 			});
 		} else {
 			map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
+			determineArrows();
+			determineSection();
 		}
-
-		determineSection();
-		determineArrows();
 	}
 
 	function determineArrows() {
-		if(row != 0 && column != 0) { $('.backArrow').fadeIn(300) } else { $('.backArrow').fadeOut(300); }
-		if(row > 1) { $('.topArrow').fadeIn(300) } else { $('.topArrow').fadeOut(300); }
-		if(row > 0 && row < maxRow) { $('.bottomArrow').fadeIn(300) } else { $('.bottomArrow').fadeOut(300); }
-		if(column > 1) { $('.leftArrow').fadeIn(300) } else { $('.leftArrow').fadeOut(300); }
-		if(column > 0 && column < maxColumn) { $('.rightArrow').fadeIn(300) } else { $('.rightArrow').fadeOut(300); }
+		if(row != 0 && column != 0) { $('.backArrow').show() } else { $('.backArrow').hide(); }
+		if(row > 1) { $('.topArrow').show() } else { $('.topArrow').hide(); }
+		if(row > 0 && row < maxRow) { $('.bottomArrow').show() } else { $('.bottomArrow').hide(); }
+		if(column > 1) { $('.leftArrow').show() } else { $('.leftArrow').hide(); }
+		if(column > 0 && column < maxColumn) { $('.rightArrow').show() } else { $('.rightArrow').hide(); }
 	}
 
 	function determineSection() {
@@ -63,7 +62,7 @@ $(document).ready(function() {
 		}
 	}
 
-	$(document).on('click', '#mapLayout table td', function() {
+	$(document).on('click', '#map table td', function() {
 		// find closest "tr" row tag
 		row = $(this).closest("tr").data('row');
 
