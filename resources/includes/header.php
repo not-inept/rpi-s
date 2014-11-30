@@ -1,4 +1,15 @@
-<?php session_start(); ?>
+<?php 
+
+	session_start(); 
+	if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] == 'Logout') {
+	    session_unset(); 
+
+	    session_destroy();
+	  // end the session here
+	  $err = 'You have been logged out.';
+	}
+	
+?>
 
 <head>
 	<title>RPI-S</title>
@@ -31,6 +42,9 @@
 				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp'] ?></li>
 				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade'] ?> </li>
 				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp'] ?></li>
+				<form method="post" action="index.php">
+        			<input name="logout" type="submit" value="Logout" />
+    			</form>
 			</div>
 			<div id="cardPic">
 				picture
