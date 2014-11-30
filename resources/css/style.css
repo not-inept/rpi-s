@@ -55,6 +55,16 @@ li.navigation {
 	letter-spacing: 5px;
 }
 
+#userDataForm{
+	position: relative;
+	top: 290px;
+	margin-left: auto;
+	margin-right: auto;
+	width: 500px;
+	height: 616px;
+	border: 2px solid #FFFFFF;
+}
+
 #bottomPanel {
 	position: relative;
 	top: 310px;
