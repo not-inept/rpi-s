@@ -70,16 +70,16 @@
 
 	<div id="navigation">
 		<li class="navigation">
-			current location
+			<a href="index.php">Map View</a>
 		</li>
 		<li class="navigation">
-			inventory
+			<a href="user.php">Inventory</a>
 		</li>
 		<li class="navigation">
-			FAQ
+			<a href="faq.php">FAQ</a>
 		</li>
 		<li class="navigation">
-			Contact
+			<a href="contact.html">Contact</a>
 		</li>
 	</div>
 
