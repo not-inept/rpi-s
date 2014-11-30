@@ -11,7 +11,7 @@
 
 <body>
 	<div id="main">
-		<?php 
+		<?php
 			$ROOT = "";
 			require_once('./resources/includes/config.php');
 			include_once('./resources/includes/header.php'); 
@@ -23,7 +23,10 @@
 		<?php
 			if (isset($_GET['loc'])) {
 				//TODO: load image
-				echo print_r($_GET['loc']);
+				echo "<p>Quadrant".string($_GET['loc'][0])."</p>";
+				echo "<p>Row".string($_GET['loc'][1])."</p>";
+				echo "<p>Column".string($_GET['loc'][2])."</p>";
+				echo "Area location: ".string($_GET['loc'][0]).string($_GET['loc'][1]).string($_GET['loc'][2]);
 			}
 		?>
 
