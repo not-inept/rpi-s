@@ -67,17 +67,23 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 <?php if (isset($_SESSION['username'])): ?>
   <?php header("Location: ../../index.php"); ?>
 <?php else: ?>
-  <h1>Login</h1>
-  <?php if (isset($err)) echo "<p>$err</p>" ?>
-  <form method="post" action="login.php">
-    <label for="username">Username: </label><input type="name" name="username" />
-    <label for="pass">Password: </label><input type="password" name="pass" />
-    <input name="login" type="submit" value="Login" />
-  </form>
-  <h1>Or create user</h1>
-  <form method="post" action="create_user.php">
-    <input name="create" type="submit" value="Create New User" />
-  </form>
+  <div id="main2">
+    <div id="login">
+      <h1>Login</h1>
+      <?php if (isset($err)) echo "<p>$err</p>" ?>
+      <form method="post" action="login.php">
+        <p><label for="username">Username: </label><input type="name" name="username" /></p>
+        <p><label for="pass">Password: </label><input type="password" name="pass" /></p>
+        <p><input name="login" type="submit" value="Login" /></p>
+      </form>
+    </div>
+    <div id="create">
+      <h1>Or create user</h1>
+      <form method="post" action="create_user.php">
+        <p><input name="create" type="submit" value="Create New User" /></p>
+      </form>
+    </div>
+  </div>
 <?php endif; ?>
 </body>
 </html>
