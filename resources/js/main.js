@@ -66,18 +66,23 @@ $(document).ready(function() {
 	}
 
 	$(document).on('click', '#map table td', function() {
-		// find closest "tr" row tag
-		row = $(this).closest("tr").data('row');
-
-		// get the value in the column attribute
-		column = $(this).data('column');
-
 		if(!zoomedIn) {
 			zoomedIn = true;
+
+			// find closest "tr" row tag
+			row = $(this).closest("tr").data('row');
+
+			// get the value in the column attribute
+			column = $(this).data('column');
+			
 			loadNewMap();
 		} else {
-			console.log("The row is " + row + " and the column is " + column + "\n");
-			//TODO: get quadrant and call areas.php?loc=quadrant,row,column
+			var innerRow = $(this).closest("tr").data('row');
+			var innerColumn = $(this).data('column');
+
+			console.log("The row is " + innerRow + " and the column is " + innerColumn + " and section " + section + "\n");
+			var location = 'area.php?loc=' + section + '&row=' + innerRow + '&column' + innerColumn;
+			window.location.href = location;
 		}
 	});
 
