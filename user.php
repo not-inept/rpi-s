@@ -1,10 +1,9 @@
 <?php
-require 'resources/includes/config.php';
-require 'resources/includes/connect.php';
+require 'resources/includes/header.php';
 if (isset($_SESSION['username'])){
 	$stmt = $dbconn->prepare('SELECT p.*,f.factionName FROM players p, factions f
 WHERE p.name=:username AND p.faction = f.factionID;');
-	$stmt->exec(array(
+	$stmt->execute(array(
 		':username' => $_SESSION['username']
 		));
 	$player_data = $stmt->fetch();
