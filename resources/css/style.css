@@ -128,6 +128,8 @@ li.navigation {
 	text-align: center;
 	font-family: 'Press Start 2P', cursive;
 	font-size: 40px;
+	-ms-transform: rotate(270deg);
+	-webkit-transform: rotate(270deg);
 	transform: rotate(270deg);
 }
 
@@ -229,11 +231,14 @@ li.navigation {
 	padding: 15px;
 	border-top: 2px solid #FFFFFF;
 	border-bottom: 2px solid #FFFFFF;
-	overflow: auto;
 }
 
 #newsFeed {
+	margin-left: -2em;
+	height: 75%;
 	list-style: none;
+	overflow: scroll;
+	overflow-x: hidden;
 }
 
 #panelInfo {

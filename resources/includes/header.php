@@ -26,13 +26,13 @@
 
 		<div id="news">
 			<h1>Morning News</h1>
-			<div id="newsFeed">
+			<ul id="newsFeed">
 				<?php
 					require 'config.php';
 					require 'connect.php';
 					require 'classifieds.php';
 				?>
-			</div>
+			</ul>
 		</div>
 
 		<div id="card">
