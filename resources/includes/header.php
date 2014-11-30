@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <head>
 	<title>RPI-S</title>
 	<link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
