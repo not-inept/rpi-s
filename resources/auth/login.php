@@ -1,6 +1,6 @@
 <?php
 session_start();
-
+//TODO: Apply styling to login.php
 require '../includes/config.php';
 // Connect to the database
 try {
@@ -72,7 +72,7 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
     <label for="pass">Password: </label><input type="password" name="pass" />
     <input name="login" type="submit" value="Login" />
   </form>
-  <h1>Or ceate user</h1>
+  <h1>Or create user</h1>
   <form method="post" action="create_user.php">
     <input name="create" type="submit" value="Create New User" />
   </form>
