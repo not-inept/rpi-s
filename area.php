@@ -21,9 +21,9 @@
 		<div id="map">
 			
 		<?php
-			isset($_GET['loc']) {
+			if (isset($_GET['loc'])) {
 				//TODO: load image
-				print_r($_GET['loc']);
+				echo print_r($_GET['loc']);
 			}
 		?>
 
