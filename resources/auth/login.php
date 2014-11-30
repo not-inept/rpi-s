@@ -25,14 +25,15 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
 
   $salted = hash('sha256', $salt.$_POST['pass']);
   echo $salted;
-
-  $login_stmt = $dbconn->prepare('SELECT id, name, faction, grade, exp, hp   FROM players WHERE name=:username AND password=:pass');
+  echo $_POST['username'];
+  echo $_POST['pass'];
+  $login_stmt = $dbconn->prepare('SELECT playerID, name, faction, grade, exp, hp   FROM players WHERE name=:username AND password=:pass');
   $login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
   
   
   if ($user = $login_stmt->fetch()) {
     $_SESSION['username'] = $user['name'];
-    $_SESSION['id'] = $user['id'];
+    $_SESSION['id'] = $user['playerID'];
     $_SESSION['grade'] = $user['grade'];
     $_SESSION['faction'] = $user['faction'];
     $_SESSION['exp'] = $user['exp'];
