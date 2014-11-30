@@ -1,7 +1,6 @@
 <?php
-
+require '../includes/config.php';
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['faction'])) {
-	require '../includes/config.php';
     $name = $config['DB_NAME']; //DB We're using from config
     $username = $_POST['username']; //Data received from form
     $password = $_POST['password'];
@@ -63,17 +62,19 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<input type='email' id='email' name='email'>
 	</p>
 	<p>
-	<label for='faction'>Faction:</label>
-	<input type='faction' id='faction' name='faction'>";
+	<label for='faction'>Faction:</label>";
     try {
+        $name = $config['DB_NAME']; //DB We're using from config
         $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $factions = $pdo->prepare('SELECT `factionID`,`factionName`,`description` FROM `factions` ORDER BY `factionID`');
         $factions->execute();
-        $factions = $factions->fetch();
-        foreach ($factions as $faction) {
+        $result = $factions-fetchAll();
+        foreach ($result as $faction) {
             if ($faction['factionID'] != -1) {
-                echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>";
+                print_r($faction);
+                echo "</br>";
+                echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>".$faction["factionName"];
                 echo "<p>".$faction['description']."</p>";
             }
         }
