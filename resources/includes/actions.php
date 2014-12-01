@@ -32,14 +32,14 @@
 	        		$enemies = $pdo->prepare('SELECT * FROM `enemies` WHERE enemyID=:id');
 	    			$enemies->execute(array(':id' => $actionParam));
 	        		$enemy = $enemies->fetch();
-	        		$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>"
-	        		$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
+	        		$cmd = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>"
+	        		$cmd .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
 	        		$damage = 0; $hits = 0;
 	        		$new_exp = $_SESSION['exp'];
 	        		while ($hits < $enemy['hits']) {
 	        			$curDam = rand(0,(int) $enemey['maxDamage'] - $damage);
 	        			$damage += $curDam;
-	        			$_SESSION['cmd'] .= $enemy['name']." attacks for ".$curDam." hp<br>";
+	        			$cmd .= $enemy['name']." attacks for ".$curDam." hp<br>";
 	        			$hits++;
 	        		}
 	        		$new_hp = (int) $_SESSION['hp'] - $damage;
@@ -49,7 +49,7 @@
 	        			$new_hp = 0;
 	        			$new_exp = $_SESSION['exp'];
 	        			$new_points = 0;
-	        			$_SESSION['cmd'] .= $_SESSION['name']." killed you D:";
+	        			$cmd .= $_SESSION['name']." killed you D:";
 	        		}
 	        		if ($new_exp > (int) $_SESSION['maxxp']) {
 	        			$new_grade++;
@@ -64,7 +64,8 @@
 	    				));
 	    			$loc = explode(",",$_SESSION['current_location']);
 	    			$_SESSION['points'] = $new_points;
-	    			$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
+	    			$cmd .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
+	    			$_SESSION['cmd'] = $cmd;
 	    			$newLocation = $_SESSION['current_location'];
 	    			header("location: ../../area.php?loc=$newLocation");
 		        }
