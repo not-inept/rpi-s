@@ -30,7 +30,7 @@
 		        }
 		    } else {
 		    	echo $actionPoints;
-		    	echo intval($event['actionCost'];
+		    	echo intval($event['actionCost']);
 		    	echo "not enough ap bud";
 		    }
         }  catch(PDOException $e) {
