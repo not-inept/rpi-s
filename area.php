@@ -36,16 +36,9 @@
 			<div id="controls">
 				<?php include './resources/includes/controls.php'; ?>
 			</div>
-
+			
 			<div id="panelInfo">
-				<div id="panel1">
-					<h1>panel01</h1>
-					Random information for panel01. Probably about the mission the player has been assigned. Go into specifics. Blah blah blah. 
-				</div>
-				<div id="panel2">
-					<h1>panel02</h1>
-					Random information for panel02. Probably about the area that the player is in, possible spawn, foes, friends, items that can be found, etc.
-				</div>
+				<?php include './resources/includes/loadMapPanel.php'; ?>
 			</div>
 
 			<div id="information">
