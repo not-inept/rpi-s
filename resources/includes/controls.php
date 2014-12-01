@@ -29,13 +29,13 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 		<li class='control'>
 		<a href='
 		area.php?loc=".$_SESSION['current_location']."
-		''>Your character appears to be elsewhere. Click here to go there!</a>
+		''>Your character appears to be elsewhere. <br><br>(click  to go there)</a>
 		</li>";
 	}
 } else {
 	echo '
 	<li class="controls">
-	<a href="resources/auth/login.php">[ insert card ] <br>to play</a>
+	<a href="resources/auth/login.php">[ insert card ] <br><br>(click to play)</a>
 	</li>';
 }
 ?>
