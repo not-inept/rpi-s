@@ -24,7 +24,7 @@ except ImportError:                 # Version 2.7 or earlier
 import xml.etree.ElementTree as ET
 
 def look_for_place(data):
-    areas = {'armory': '3,2,2', 'empac':'3,2,1', 'russel sage dining hall': '3,1,2', 'commons dining hall': '4,1,1','jec': '3,1,2', 'campus': '1,1,2', 'cii': '312', 'dcc': '3,1,2', 'evac': '2,2,2', 'sage lab': '3,1,2', 'cbis': '3,2,2', 'chapel and cultural center': '2,2,1', 'union': '3,1,2'}
+    areas = {'armory': '3,2,2', 'empac':'3,2,1', 'russel sage dining hall': '3,1,2', 'commons dining hall': '4,1,1','jec': '3,1,2', 'campus': '1,1,2', 'cii': '3,1,2', 'dcc': '3,1,2', 'evac': '2,2,2', 'sage lab': '3,1,2', 'cbis': '3,2,2', 'chapel and cultural center': '2,2,1', 'union': '3,1,2'}
     months = ['january', 'february', 'march', 'april', 'may', 'june', 'july', 'august', 'september', 'october', 'november', 'december']
     compare = ['armory','empac','russel sage dining hall','commons dining hall','jec','campus','cii','dcc','ecav','sage lab','cbis','chapel and cultural center','union']
 
