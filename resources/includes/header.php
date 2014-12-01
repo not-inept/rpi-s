@@ -41,16 +41,12 @@
 				<h1>Player Info</h1>
 				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username']; ?></li>
 				<?php
-					$faction = $dbconn->prepare('SELECT `factionName` FROM `factions` WHERE `factionID` = :factionID');
-					$faction->execute(array(
-						':factionID' => $_SESSION['faction']
-						));
-					$faction_str = $faction->fetchColumn(0);
+					
 				?>
-				<li class="cardInfo" id="faction">Faction: <?php echo $faction_str; ?></li>
+				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction_str']; ?></li>
 				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp']; ?> / <?php echo $_SESSION['maxhp']; ?></li>
-				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade']; ?> </li>
-				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp']; ?></li>
+				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade_str']; ?> </li>
+				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp']; ?> / <?php echo $_SESSION['maxxp'] ?></li>
 				<form method="post" action="index.php">
         			<input name="logout" type="submit" value="Logout" />
     			</form>

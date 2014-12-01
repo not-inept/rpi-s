@@ -24,23 +24,35 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   $salt = ($res) ? $res['allnaturalseasalt'] : '';
 
   $salted = hash('sha256', $salt.$_POST['pass']);
-  echo $salted;
-  echo $_POST['username'];
-  echo $_POST['pass'];
   $login_stmt = $dbconn->prepare('SELECT playerID, name, faction, grade, exp, hp, maxhp   FROM players WHERE name=:username AND password=:pass');
   $login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
-  
   
   if ($user = $login_stmt->fetch()) {
     $_SESSION['username'] = $user['name'];
     $_SESSION['id'] = $user['playerID'];
-    //TODO: Convert grade to string from grades table
     $_SESSION['grade'] = $user['grade'];
-    //TODO: Convert faction to string from faction table
     $_SESSION['faction'] = $user['faction'];
     $_SESSION['exp'] = $user['exp'];
     $_SESSION['hp'] = $user['hp'];
     $_SESSION['maxhp'] = $user['maxhp'];
+    $faction = $dbconn->prepare('SELECT `factionName` FROM `factions` WHERE `factionID` = :factionNum;');
+    $faction->execute(array(
+      ':factionNum' =>$_SESSION['faction']
+      ));
+    $faction_str = $faction->fetchcolumn(0);
+    $grade = $dbconn->prepare('SELECT `name` FROM `grades` WHERE `id` = :grade;');
+    $grade->execute(array(
+      ':grade' => $user['grade']
+      ));
+    $grade_str = $grade->fetchcolumn(0);
+    $explim = $dbconn->prepare('SELECT `maxEXP` FROM `grades` WHERE `id` = :grade;');
+    $explim->execute(array(
+      ':grade' => $user['grade']
+    ));
+    $maxxp = $explim->fetchcolumn(0);
+    $_SESSION['grade_str'] = $grade_str;
+    $_SESSION['faction_str'] = $faction_str;
+    $_SESSION['maxxp'] = $maxxp;
     header("Location: ../../index.php");
   }
   else {
