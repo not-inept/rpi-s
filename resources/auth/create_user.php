@@ -37,7 +37,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     	} catch(PDOException $e) {
     		print_r($e);
     		echo "User not added.</p>";
-    	}
     }  catch(PDOException $e) {
     	echo "<p>Database does not yet exist...</p>";
     }
