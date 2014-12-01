@@ -63,16 +63,16 @@
 
 
 	<div id="navigation">
-		<li class="navigation">
+		<li id="mapview" class="navigation">
 			<a href="index.php">Map View</a>
 		</li>
-		<li class="navigation">
+		<li id="user" class="navigation">
 			<a href="user.php">Inventory</a>
 		</li>
-		<li class="navigation">
+		<li id="faq" class="navigation">
 			<a href="faq.php">FAQ</a>
 		</li>
-		<li class="navigation">
+		<li id="about" class="navigation">
 			<a href="about.php">About</a>
 		</li>
 	</div>
