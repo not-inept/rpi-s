@@ -52,7 +52,7 @@
 			</div>
 		<?php else: ?>
 			<div id="cardNone">
-				<a href="resources/auth/login.php">[ insert card ]</a>
+				<a href="resources/auth/login.php">[ insert card ]<br>(click to play)</a>
 			</div>
 		<?php endif; ?>
 		</div>

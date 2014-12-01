@@ -35,7 +35,7 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 } else {
 	echo '
 	<li class="controls">
-	<a href="resources/auth/login.php">[ insert card ] to play</a>
+	<a href="resources/auth/login.php">[ insert card ] <br>to play</a>
 	</li>';
 }
 ?>
