@@ -47,9 +47,9 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<html>
 	<head>
 	<title>RPI-S: create user</title>
-	<link rel='stylesheet' href='../css/style.css' type='text/css'/>
-	<?php	include_once('../includes/header.php'); ?>
-	</head>
+	<link rel='stylesheet' href='../css/style.css' type='text/css'/>";
+	include_once('../includes/header.php');
+	echo "</head>
 	<form id='newUser' name='newUser' action='create_user.php' method='post'>
 	<p>
 	<label for='username'>Username:</label>
