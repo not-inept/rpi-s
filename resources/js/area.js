@@ -4,9 +4,9 @@ $(document).ready(function() {
 	var row = Number(location[1]);
 	var column = Number(location[2]);
 
-	// versions to ensure correct image is loaded in the browser
-	var version = 1;
-	loadNewMap(false);
+	var mapName = section + '/' + row + '_' + column;
+	determineArrows();
+	setLocation('/campus_map/' + mapName + '/');
 
 	function setLocation(locString) {
 		var uname = "anon";
@@ -14,25 +14,6 @@ $(document).ready(function() {
 			var uname = $('#name').html().split(':')[1].trim();
 		}
 		$('#location').html(uname + "@rpi-s: " + locString);
-	}
-
-	function loadNewMap(fade) {
-		if(typeof fade === 'undefined') {
-			fade = true;
-		}
-
-		var mapName = section + '/' + row + '_' + column;
-		var map = $('#map');
-		if(fade) {
-			map.fadeOut(300, function() {
-				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
-				determineArrows();
-				map.fadeIn(300)
-			});
-		} else {
-			map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
-			determineArrows();
-		}
 	}
 
 	function determineArrows() {
@@ -59,7 +40,7 @@ $(document).ready(function() {
 		}
 
 		if(isValid) {
-			loadNewMap();
+			window.location.href = "area.php?loc=" + section + "," + row + "," + column;
 		}
 	});
 });
