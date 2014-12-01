@@ -62,17 +62,15 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<input type='email' id='email' name='email'>
 	</p>
 	<p>
-	<label for='faction'>Faction:</label>
-	<input type='faction' id='faction' name='faction'>";
+	<label for='faction'>Faction:</label>";
     try {
         $name = $config['DB_NAME']; //DB We're using from config
         $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $factions = $pdo->prepare('SELECT `factionID`,`factionName`,`description` FROM `factions` ORDER BY `factionID`');
         $factions->execute();
-        $factions = $factions->fetch();
         print_r($factions);
-        foreach ($factions as $faction) {
+        foreach ($factions->fetch() as $faction) {
             if ($faction['factionID'] != -1) {
                 print_r($faction);
                 echo "</br>";
