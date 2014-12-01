@@ -81,6 +81,7 @@
 	    			$_SESSION['cmd'] = $cmd;
 	    			$_SESSION['exp'] = $new_exp;
 	    			$_SESSION['grade'] = $new_grade;
+	    			$_SESSION['hp'] = $new_hp;
 	    			$newLocation = $_SESSION['current_location'];
 	    			header("location: ../../area.php?loc=$newLocation");
 		        }
