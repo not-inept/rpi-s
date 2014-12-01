@@ -17,6 +17,13 @@ $(document).ready(function() {
 	// versions to ensure correct image is loaded in the browser
 	var version = 1;
 	loadNewMap(false);
+	function setLocation(locString) {
+		var uname = "anon"
+		if $('#name').length) {
+			var uname = $('#name').html().split(':')[1].trim();
+		}
+		$('#location').html(uname + "@rpi-s: " + locString);
+	}
 
 	function loadNewMap(fade) {
 		if(typeof fade === 'undefined') {
@@ -25,8 +32,11 @@ $(document).ready(function() {
 
 		var mapName = 'map_' + row + '_' + column + '_' + version;
 		var map = $('#map');
-		$('#location').html(mapName);
-
+		if (mapName == "map_0_0_1") {
+			setLocation('/campus_map/main_map/');
+		} else {
+			setLocation('/campus_map/main_map/'+mapName+'/');
+		}	
 		if(fade) {
 			map.fadeOut(300, function() {
 				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
