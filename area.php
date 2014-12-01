@@ -2,7 +2,6 @@
 
 <html>
 
-
 <?php
 	session_start();
 	require_once('./resources/includes/config.php');
@@ -12,14 +11,13 @@
 <body>
 	<div id="main">
 
-
 		<!-- TODO: Change map to individual image, allow navigation out -->
 		<!-- Div closed in php, setting image as background -->
 			
 		<?php
 			echo "<div id='map'";
 			if (isset($_GET['loc'])) {				
-				$loc = explode(",",$_GET['loc']));
+				$loc = explode(",",$_GET['loc']);
 				echo " style='background-image: url(resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
 				echo ">Not a valid location! D:";
