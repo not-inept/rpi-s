@@ -31,8 +31,11 @@ if (isset($_SESSION['username'])){
         <div id = "userDataForm">
         <form name="input" action="account_update.php" method="post">
                 <ul>
-                <li>Name: <?php $_SESSION['username'] ?></li>
-                 </ul>
+                        <li>Name: <?php echo $_SESSION['username']; ?></li>
+                        <li>Location: <?php echo $_SESSION['location']; ?></li>
+                        <li>Action Points: <?php echo $_SESSION[''];  ?></li>
+                        <li>Current Quest: <?php echo $_SESSION['quest']; ?></li>
+                </ul>
                 Name: <input type="text" name="first" id="first" value="<?php echo $a; ?>"><br>
                 Password: <input type="password" name="pwd" id="pwd" value="<?php echo $b; ?>"><br>
                 Email: <input type="text" name="email" id="email" value="<?php echo $c; ?>"><br>

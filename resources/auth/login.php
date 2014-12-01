@@ -50,17 +50,19 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
       ':grade' => $user['grade']
     ));
     $maxxp = $explim->fetchcolumn(0);
-    $loc = $dbconn->prepare('SELECT `current_location`, `active_quest` FROM `players` WHERE `name` = :username');
+    $loc = $dbconn->prepare('SELECT `current_location`, `active_quest`, `action_points` FROM `players` WHERE `name` = :username');
     $loc->execute(array(
       ':username' => $user['name']
       ));
     $location = $loc->fetchcolumn(0);
     $quest = $loc->fetchcolumn(1);
+    $points = $loc->fetchcolumn(2);
     $_SESSION['grade_str'] = $grade_str;
     $_SESSION['faction_str'] = $faction_str;
     $_SESSION['maxxp'] = $maxxp;
     $_SESSION['location'] = $location;
     $_SESSION['quest'] = $quest;
+    $_SESSION['points'] = $points;
     header("Location: ../../index.php");
   }
   else {
