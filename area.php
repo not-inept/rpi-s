@@ -17,14 +17,12 @@
 			$mapString = "<div id='map'";
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
-				//print_r($loc[0]);
-				//$mapString .= " style='background-image: url(resources/images/maps/";
-				//$mapString .= oc[0;
-				//."/".string($loc[1])."_".string($loc[2]).".png);'>";
+				$mapString .= " style='background-image: url(resources/images/maps/";
+				$mapString .= $loc[0] . "/" . $loc[1] . "_" . $loc[2] . ".png);'";
 			} else {
 				$mapString .= "> Not a valid location! D:";
 			}
-			$mapString .= "</div>";
+			$mapString .= "></div>";
 			echo $mapString;
 		?>
 
