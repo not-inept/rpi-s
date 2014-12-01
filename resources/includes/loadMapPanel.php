@@ -1,6 +1,4 @@
   <?php
-
-  if ($user = $login_stmt->fetch()) {
 	try {
         $name = $config['DB_NAME']; //DB We're using from config
         $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
