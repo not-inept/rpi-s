@@ -56,14 +56,16 @@
 	        		}
 	        		if ($new_exp > (int) $_SESSION['maxxp']) {
 	        			$new_grade++;
-	        			$cmd .= "grade promoted to ".$new_grade."<br>";
-	        			$grade = $dbconn->prepare('SELECT `name`,`maxEXP` FROM `grades` WHERE `id` = :grade;');
+	        			$grade = $pdo->prepare('SELECT `name`,`maxEXP` FROM `grades` WHERE `id` = :grade;');
     					$grade->execute(array(
       						':grade' => $new_grade
       					));
+
     					$grade_data = $grade->fetch();
     					$_SESSION['maxxp'] = $grade_data['maxEXP'];
     					$_SESSION['grade_str'] = $grade_data['name'];
+    					$cmd .= "grade promoted to ".$_SESSION['grade_str']."<br>";
+
 	        		}
 		        	$prep = $pdo->prepare('UPDATE `players` SET hp=:hp, action_points=:points, exp=:exp, grade=:grade WHERE  playerID = :id;');
 	    			$prep->execute(array(
