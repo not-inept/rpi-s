@@ -1,80 +1,100 @@
 [
     {
+        "date": "December 3 2014", 
+        "areaID": "3,1,2", 
+        "location": "union", 
+        "description": "Description: RPI Circle K International Community Services will be selling Holiday Candy Grams for only $1 each! Stop by the table in the Union West Lobby from 10am-5pm on Wednesday December 3rd, through Friday December 5th, to make and send a candy gram to your friends! All proceeds go towards supporting the education of children at Hope 7 Community Center.", 
+        "title": "Circle K to Hold Candy Gram Fundraiser"
+    }, 
+    {
+        "date": "December 19 2014", 
+        "areaID": "3,1,2", 
+        "location": "union", 
+        "description": "Description: RPI-Sage Hillel hosts a shabbat dinner for the whole student and faculty community. Food is home cooked and served at no cost. Optional services start at 5:30pm, dinner starts at 6:00pm. Newcomers are always welcome!", 
+        "title": "Hillel to Host Shabbat Dinner"
+    }, 
+    {
+        "date": "December 18 2014", 
+        "areaID": "1,1,2", 
+        "location": "campus", 
+        "description": "Description: Designed to guide participants along the difficult terrain of financial mathematics in order to support their exploration and learning of the various theories of quantitative and mathematical finance, this IWQF workshop will help participants obtain a good hands-on learning experience in different topics of quantitative finance.", 
+        "title": "Rensselaer to Host 6th International Workshop on Quantitative Finance"
+    }, 
+    {
+        "date": "December 16 2014", 
+        "areaID": "1,1,2", 
+        "location": "campus", 
+        "description": "Description: Don't miss out on your chance at a piece of the $15,000 in cash prizes.This competition is developmental in nature to prepare students to enter the global circuit of business plan competitions.Students will learn to break down their idea into the key business model assumptions, get outside the building and test those assumptions in the marketplace and learning from the failures/successes of those tests. Submit your business model canvas before midnight on Jan 30.", 
+        "title": "Lally Issues Call for Entries for RPI Business Model Competition"
+    }, 
+    {
+        "date": "December 15 2014", 
+        "areaID": "312", 
+        "location": "cii", 
+        "description": "Description: speaker Dr. David Woodruff from IBM's Almaden Research Center will present \"Sketching as a Tool for Numerical Linear Algebra.\"  Refreshments will be served at 2:30 p.m.", 
+        "title": "Computer Science Colloquium to be Held December 15"
+    }, 
+    {
+        "date": "December 9 2014", 
+        "areaID": "312", 
+        "location": "cii", 
+        "description": "Description: Jointly hosted by Rensselaer's Computer Science department and Network Science and Technology Center, this colloquium will feature speaker Radosaw Michalski from the Wrocawska University of Technology, who will present, \"The Spread of Influence in Temporal Social Networks.\"  Refreshments will be served at 2:30 p.m.", 
+        "title": "Computer Science, NeST to Host Joint Colloquium"
+    }, 
+    {
         "date": "November 25 2014", 
+        "areaID": "1,1,2", 
         "location": "campus", 
         "description": "Description: Do you have a business concept? Are you ready to move it forward? Mark your calendars for the RPI Business Model Competition, and let us know you're interested in competing by sending a brief description of your business idea!You must be a Rensselaer student for at least one semester in the 2014-2015 academic year to participate.", 
         "title": "Intents to Submit Now Being Accepted for RPI Business Model Competition"
     }, 
     {
         "date": "November 22 2014", 
+        "areaID": "3,2,1", 
         "location": "empac", 
         "description": "<p>The Rensselaer Orchestra, under the direction of Nicholas DeMaison, presents its annual Fall concert.</p>", 
         "title": "Rensselaer Orchestra Fall Concert Among Upcoming iEAR Events"
     }, 
     {
         "date": "December 12 2014", 
+        "areaID": "3,2,1", 
         "location": "empac", 
         "description": "Description: Distinguished artist-in-residence Laurie Anderson presents a feature film in the form of a personal essay, with an original soundtrack of new music and a discussion following the screening.", 
         "title": "Laurie Anderson to Present New Film at EMPAC"
     }, 
     {
         "date": "December 12 2014", 
+        "areaID": "3,1,2", 
         "location": "union", 
         "description": "Description:RPI-Sage Hillel will be hosting a shabbat dinner for the whole student and faculty community. The food is home-cooked and served at no cost, and newcomers are always welcome! Optional services start at 5:30pm; dinner starts at 6:00pm.", 
         "title": "Hillel to Host Shabbat Dinner"
     }, 
     {
         "date": "November 20 2014", 
+        "areaID": "3,2,2", 
         "location": "cbis", 
         "description": "<p>The first Music and Science presentation will take place at the CBIS auditorium from noon to 1:00 Nov. 20th featuring Shakir Khan demonstrating the practice of aural transmission in Guru/Shishya Parampara, the tradition and lineage of knowledge in Hindustani classical music.&#160;&#160;&#160; Khan will also perform a concert at CBIS Nov. 21st at 7:00 pm</p>", 
         "title": "HASS, CBIS to Hold First \"Music and Science\" Presentation and Concert"
     }, 
     {
         "date": "December 3 2014", 
+        "areaID": "3,1,2", 
         "location": "dcc", 
         "description": "Description: Dr. Tugrul Ozel of Rutgers University will present \"Integrated Physics Based Modeling and Multi-objective Optimization Approach for Micro-milling Titanium Alloy.\"", 
         "title": "Dept. of MANE Colloquium Scheduled for December 3"
     }, 
     {
         "date": "December 10 2014", 
+        "areaID": "3,1,2", 
         "location": "jec", 
         "description": "Description: Speaker Dr. Dominic Di Tori of NAE, will present \"Modern Models for Predicting Partitioning, Bioconcentration, and Toxicity of Organic Chemicals: The End of the Age of Octanol\"", 
         "title": "C & EE Seminar to be Held December 10"
     }, 
     {
         "date": "December 5 2014", 
+        "areaID": "3,1,2", 
         "location": "dcc", 
         "description": "Description: As part of their end-of-term celebration, student creative writers will be reading excerpts of their short story work.   This event is free and open to the public, and all are welcome to attend!  Refreshments will be served.", 
         "title": "Student Writers to Mark End of Semester with Short Story Readings"
-    }, 
-    {
-        "date": "December 9 2014", 
-        "location": "union", 
-        "description": "Description: TIAA-CREF Individual Client Services Consultant Peter Crehan will be on campus for one-on-one consultations on a broad range of retirement topics. Attend this upcoming event to help you become better informed and more confident about Rensselaer's retirement plan benefits!", 
-        "title": "TIAA-CREF to Offer Confidential Retirement Counseling December 9"
-    }, 
-    {
-        "date": "December 9 2014", 
-        "location": "ecav", 
-        "description": "Description: President Shirley Ann Jackson invites all faculty, staff, and students to the Annual Campus Seasonal Celebration.  Lunch will be served.  Limited parking is available.", 
-        "title": "Annual Campus Seasonal Celebration to be Held December 9"
-    }, 
-    {
-        "date": "November 20 2014", 
-        "location": "union", 
-        "description": "Description: With this week's Super November Special at the RPI Bookstore, you can get 30% off all winter hats this Thursday through Saturday.  Stay warm with their great selection of winter hats for men, women and children!", 
-        "title": "RPI Bookstore Continues Super November Specials"
-    }, 
-    {
-        "date": "November 19 2014", 
-        "location": "dcc", 
-        "description": "Description: Jim Kurose, of the Department of Computer Science at University of Massachusetts Amherst, will present \"Design and Analysis of Content Caching Networks.\" Refreshments will be served at 3:30 PM.", 
-        "title": "Douglas Mercer '77 ECSE Lecture Series Continues November 19"
-    }, 
-    {
-        "date": "November 19 2014", 
-        "location": "empac", 
-        "description": "Description: Terra Cafe's last lunch for the fall 2014 semester will feature Aussie Meat Pie, filled with your choice of lamb and beef or seitan, mixed with potatoes, carrots, peas, onions, and topped with gravy.  Each entree comes with drinks, a side salad, and dessert...all for only $7.00!", 
-        "title": "Terra Cafe Serving Last Lunch for Fall Semester"
     }
 ]

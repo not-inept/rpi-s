@@ -1,6 +1,5 @@
 <?php
 session_start();
-//TODO: Apply styling to login.php
 require '../includes/config.php';
 // Connect to the database
 try {
