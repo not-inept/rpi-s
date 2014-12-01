@@ -12,7 +12,7 @@
 	        $action_cost = (int) $event['actionCost'];
 	        $actionParam = $event['actionParam'];
 	        echo "Entering if...";
-	        if ($action_points >= $action_cost)) {
+	        if ($action_points >= $action_cost) {
 	        	$new_points = $action_points - $action_cost;
 	        	echo $new_points;
 		        if ($event['actionType'] == "move") {
