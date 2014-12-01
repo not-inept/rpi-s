@@ -34,15 +34,7 @@
 		<!-- TODO: Use PHP to generate buttons/panel -->
 		<div id="bottomPanel">
 			<div id="controls">
-			<?php if (isset($_SESSION['username'])): ?>
-				<?php 
-
-				?>
-			<?php else: ?>
-				<li class="controls">
-					<a href="resources/auth/login.php">[ insert card ] to play</a>
-				</li>
-			<?php endif; ?>
+				<?php include './resources/includes/controls.php'; ?>
 			</div>
 
 			<div id="panelInfo">
