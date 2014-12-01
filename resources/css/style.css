@@ -125,6 +125,7 @@ h2.userInventory{
 	top: 50%;
 	left: 0%;
 	transform: translate(0%,-50%);
+	-webkit-transform: translate(0%,-50%);
 	width: 240px;
 	height: 390px;
 	padding: 25px;
@@ -175,6 +176,7 @@ h2.userInventory{
 	font-family: 'Press Start 2P', cursive;
 	font-size: 40px;
 	transform: rotate(90deg);
+	-webkit-transform: rotate(90deg);
 }
 
 #location {
