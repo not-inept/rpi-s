@@ -44,7 +44,7 @@
 				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp']; ?> / <?php echo $_SESSION['maxxp'] ?></li>
 				<li class="cardInfo" id="points">Points: <?php echo $_SESSION['points'] ?> </li>
 				<form method="post" action="index.php">
-        			<input name="logout" type="submit" value="Logout" />
+        			<input name="logout" type="submit" value="[ remove card ]" />
     			</form>
 			</div>
 			<div id="cardPic">
