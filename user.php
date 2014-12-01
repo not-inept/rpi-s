@@ -17,7 +17,7 @@ if (isset($_SESSION['username'])){
         <ul>
         <?php
         foreach ($stmt as $row){
-                echo '<li>'.$row['name'].'</li>';
+                echo '<li>'.$row['name'].': '.$row['description'].'</li>';
         }
         ?>
         </ul>
