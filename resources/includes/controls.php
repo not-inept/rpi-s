@@ -30,6 +30,13 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 	        $events = $pdo->prepare('SELECT * FROM `events` WHERE areaID=:id');
 	    	$events->execute(array(':id' => $_GET['loc']));
 	        $result = $events->fetchAll();
+	        if (count($result) == 0) {
+	        	echo "<li class='control'>";
+        		echo "<a href='./index.php'>";
+        		echo "Ooops, looks like your stuck. Sorry, mate.";
+        		echo "</a>";
+				echo "</li>";
+	        }
 	        foreach ($result as $event) {
         		echo "<li class='control'>";
         		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
