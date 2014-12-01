@@ -80,7 +80,10 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 </head>
 <body>
 <?php if (isset($_SESSION['username'])): ?>
-  <?php header("Location: ../../index.php"); ?>
+  <?php 
+    $curLoc = $_SESSION['current_location'];
+    header("Location: ../../area.php?loc=$curLoc"); 
+  ?>
 <?php else: ?>
   <div id="main2">
     <div id="login">
