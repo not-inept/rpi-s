@@ -12,17 +12,16 @@
 	<div id="main">
 
 		<!-- TODO: Change map to individual image, allow navigation out -->
-		<!-- Div closed in php, setting image as background -->
 			
 		<?php
 			$mapString = "<div id='map'";
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
 				$mapString += " style='background-image: url(resources/images/maps/";
-				$mapString += string($loc[0]);
+				//$mapString += string($loc[0]);
 				//."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
-				$mapString += ">Not a valid location! D:";
+				$mapString += "> Not a valid location! D:";
 			}
 			$mapString += "</div>";
 			echo $mapString;
