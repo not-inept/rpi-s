@@ -68,7 +68,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     try {
         $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-        $factions = $pdo->prepare('SELECT `factionID`,`factionName`,` FROM `factions` ORDER BY `factionID`');
+        $factions = $pdo->prepare('SELECT `factionID`,`factionName`,`description` FROM `factions` ORDER BY `factionID`');
         $factions->execute();
         $factions = $factions->fetch();
         foreach ($factions as $faction) {
