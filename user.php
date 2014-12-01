@@ -17,6 +17,9 @@ if (isset($_SESSION['username'])){
         <h2 class = "userInventory">Player Items:</h2>
         <ul>
         <?php
+        foreach ($stmt as $row){
+                echo $row['name'];
+        }
         $inventory = $stmt->fetch(PDO::FETCH_ASSOC);
         echo $inventory['name'];
         while ($row = $stmt->fetch()){
