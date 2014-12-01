@@ -1,5 +1,5 @@
 #rpi-s
-A PHP/JS powered text based RPG that takes place on the campus.
+A PHP/JS powered text based RPG that takes place on RPI's campus.
 ###Usage/Installation
 First create a file "resources/includes/config.php" of the format:
 ````php
