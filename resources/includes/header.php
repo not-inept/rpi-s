@@ -45,7 +45,7 @@
 					$faction->execute(array(
 						':factionID' => $_SESSION['faction']
 						));
-					$faction_str = $faction->fetch();
+					$faction_str = $faction->fetchColumn(0);
 				?>
 				<li class="cardInfo" id="faction">Faction: <?php echo $faction_str; ?></li>
 				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp']; ?> / <?php echo $_SESSION['maxhp']; ?></li>
