@@ -29,6 +29,8 @@
 	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
+		    	echo $actionPoints;
+		    	echo intval($event['actionCost'];
 		    	echo "not enough ap bud";
 		    }
         }  catch(PDOException $e) {
