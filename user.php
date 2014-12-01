@@ -11,27 +11,29 @@ if (isset($_SESSION['username'])){
 	$player_data = $stmt->fetch();
 	echo $player_data['username'];
 	echo $player_data['faction'];
+        while($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // Print out each row of the DB into HTML
+                $a = $row->name;
+                $b = $row->password;
+                $c = $row->email;
+                $d = $row->current_location;
+                $e = $row->action_points;
+                $f = $row->grade;
+                $g = $row->exp;
+                $h = $row->factionName;
+                $i = $row->special;
+                $j = $row->active_quest;
+        }
+
 } else {
 	header('location: resources/auth/login.php');
 }
-
-while($row = $stmt->fetch(PDO::FETCH_OBJ)) { // Print out each row of the DB into HTML
-	$a = $row->name;
-	$b = $row->password;
-	$c = $row->email;
-	$d = $row->current_location;
-	$e = $row->action_points;
-	$f = $row->grade;
-	$g = $row->exp;
-	$h = $row->factionName;
-	$i = $row->special;
-	$j = $row->active_quest;
-}
-
 ?>
 <body>
         <section>
         <div id = "userDataForm">
+        <ul>
+                <li>Name: <?php $_SESSION['username'] ?></li>
+        </ul>
         <form name="input" action="account_update.php" method="post">
                 Name: <input type="text" name="first" id="first" value="<?php echo $a; ?>"><br>
                 Password: <input type="password" name="pwd" id="pwd" value="<?php echo $b; ?>"><br>
@@ -42,10 +44,6 @@ while($row = $stmt->fetch(PDO::FETCH_OBJ)) { // Print out each row of the DB int
                 Faction Name: <input type="text" name="faction" id="faction" value="<?php echo $h; ?>"><br>
                 Quest: <input type="text" name="quest" id="quest" value="<?php echo $j; ?>"><br>
                 Class: <br>
-                <input type="radio" name="class" <?php echo ($f=='0')?'checked':'' ?> value="Fr" readonly>Freshmen<br>
-                <input type="radio" name="class" <?php echo ($f=='1')?'checked':'' ?> value="So" readonly>Sophomore<br>
-                <input type="radio" name="class" <?php echo ($f=='2')?'checked':'' ?> value="Jr" readonly>Junior<br>
-                <input type="radio" name="class" <?php echo ($f=='3')?'checked':'' ?> value="Sr" readonly>Senior<br><br>
                 <input type="submit" value="Update">
         </form>
         </div>
