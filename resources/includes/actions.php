@@ -1,5 +1,6 @@
 <?php
-	if (isset($_GET['eventID'])) {
+	session_start();
+	if (isset($_GET['eventID']) && isset($_SESSION['username'])) {
 		try {
 			require_once("./config.php");
 	        $name = $config['DB_NAME']; //DB We're using from config
