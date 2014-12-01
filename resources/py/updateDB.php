@@ -16,7 +16,7 @@ for ($i = 0; $i < count($feed); $i++){
 		':description' => $feed[$i]->{'description'},
 		':location' => $feed[$i]->{'location'},
 		':datestamp' => strtotime($feed[$i]->{'date'}) + 3600,
-		':area' => $feed[$i]->{'areaID'}
+		':area' => $feed[$i]->{'areaID'}n
 		));
 }
 
@@ -24,7 +24,7 @@ for ($i = 0; $i < count($feed); $i++){
 
 $cull_events = $dbconn->prepare('
 	DELETE FROM `events`
-	WHERE `date` < :current_time;');
+	WHERE `date` < :current_time AND `quest`=0;');
 $cull_events->execute(array(
 	':current_time' => time()
 	));
