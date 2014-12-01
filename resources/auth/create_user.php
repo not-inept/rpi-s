@@ -64,7 +64,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	</p>
 	<p>
 	<label for='faction'>Faction:</label>
-	<input type='faction' id='faction' name='faction'>"
+	<input type='faction' id='faction' name='faction'>";
     try {
         $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
         $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
