@@ -50,12 +50,12 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
     $_SESSION['current_location'] = $user['current_location'];
     $_SESSION['quest'] = $user['active_quest'];
     $_SESSION['points'] = $user['action_points'];
+
     if ($user['current_location'] == "-1") {
-      header("Location: ../../area.php?loc=-1")
+      header("Location: ../../area.php?loc=-1");
     } else {
       $curLoc = $user['current_location'];
       header("Location: ../../area.php?loc=$curLoc");
-
     }
   }
   else {
