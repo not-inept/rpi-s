@@ -24,7 +24,7 @@
 	    			$_SESSION['points'] = $new_points;
 	    			$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>";
 	    			$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ moveto ".$_SESSION['current_location']."<br>";
-	    			header("location: area.php?loc=$actionParam");
+	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
 		    	$_SESSION["cmd"] = $actionType;
