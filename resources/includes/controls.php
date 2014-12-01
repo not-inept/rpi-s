@@ -1,5 +1,5 @@
 <?php 
-function parseActionText($conifg, $actionText,$actionParam,$actionCost) {
+function parseActionText($config, $actionText,$actionParam,$actionCost) {
 	//allows to add rule macros for movement, etc
 	if (str_replace(":L","BLARRRRGH",$actionText) != $actionText) {
 		//We know it is movement
