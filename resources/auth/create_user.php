@@ -15,7 +15,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     		$user_chk = $dbconn->prepare('SELECT `name` FROM `players` WHERE name=:username');
     		$user_chk->execute(array(':username' => $username));
 
-    		if ($user_chk->fetch()) {
+    		if (0) {
     			echo "Duplicate username.";
 			header('location: login.php');
     		}
