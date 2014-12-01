@@ -9,8 +9,6 @@ if (isset($_SESSION['username'])){
 		':username' => $_SESSION['username']
 		));
 	$player_data = $stmt->fetch();
-	echo $player_data['username'];
-	echo $player_data['faction'];
         while($row = $stmt->fetch(PDO::FETCH_ASSOC)) { // Print out each row of the DB into HTML
                 $a = $row->name;
                 $b = $row->password;
@@ -31,10 +29,10 @@ if (isset($_SESSION['username'])){
 <body>
         <section>
         <div id = "userDataForm">
-        <ul>
-                <li>Name: <?php $_SESSION['username'] ?></li>
-        </ul>
         <form name="input" action="account_update.php" method="post">
+                <ul>
+                <li>Name: <?php $_SESSION['username'] ?></li>
+                 </ul>
                 Name: <input type="text" name="first" id="first" value="<?php echo $a; ?>"><br>
                 Password: <input type="password" name="pwd" id="pwd" value="<?php echo $b; ?>"><br>
                 Email: <input type="text" name="email" id="email" value="<?php echo $c; ?>"><br>
