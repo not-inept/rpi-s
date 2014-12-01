@@ -55,13 +55,17 @@ li.navigation {
 	letter-spacing: 5px;
 }
 
-#userDataForm{
+#userInventory{
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	width: 500px;
 	height: 616px;
 	border: 2px solid #FFFFFF;
+}
+
+h2.userInventory{
+	text-align: center;
 }
 
 #bottomPanel {
