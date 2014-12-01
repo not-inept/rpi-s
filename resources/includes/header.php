@@ -73,7 +73,7 @@
 			<a href="faq.php">FAQ</a>
 		</li>
 		<li class="navigation">
-			<a href="contact.html">Contact</a>
+			<a href="about.php">About</a>
 		</li>
 	</div>
 
