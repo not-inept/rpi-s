@@ -12,7 +12,8 @@ function parseActionText($actionText,$actionParam,$actionCost) {
 	        $result = $events->fetch();
 	        $replace = $result['name'];
         }  catch(PDOException $e) {
-        	$replace = "<p>Error loading location..</p>";
+        	$replace = "...Error loading location.";
+        	$replace.= $e;
     	}
 		$actionText = str_replace(":L",$replace,$actionText);
 	}
@@ -33,16 +34,17 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 	        if (count($result) == 0) {
 	        	echo "<li class='control'>";
         		echo "<a href='./index.php'>";
-        		echo "Ooops, looks like your stuck. Sorry, mate.";
+        		echo "Ooops, looks like you're stuck. Sorry, mate.";
         		echo "</a>";
 				echo "</li>";
-	        }
-	        foreach ($result as $event) {
-        		echo "<li class='control'>";
-        		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
-        		echo parseActionText($event['actionText'],$event['actionParam'],$event['actionCost']);
-				echo "</li>";
-            }
+	        } else {
+		        foreach ($result as $event) {
+	        		echo "<li class='control'>";
+	        		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
+	        		echo parseActionText($event['actionText'],$event['actionParam'],$event['actionCost']);
+					echo "</li>";
+	            }
+        	}
         }  catch(PDOException $e) {
         	echo "<p>Error loading controls..</p>";
         	echo $e;
