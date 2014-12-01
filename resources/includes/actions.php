@@ -8,7 +8,7 @@
 	        $events = $pdo->prepare('SELECT * FROM `events` WHERE eventID=:id');
 	    	$events->execute(array(':id' => $_GET['eventID']));
 	        $event = $events->fetch();
-	        $action_points = (int) $_SESSION['points'];
+	        $action_points = $_SESSION['points'];
 	        $action_cost = (int) $event['actionCost'];
 	        $actionParam = $event['actionParam'];
 	        echo "Entering if...";
@@ -29,6 +29,7 @@
 	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
+		    	echo $_SESSION['points'];
 		    	echo $action_points;
 		    	echo intval($event['actionCost']);
 		    	echo "not enough ap bud";
