@@ -4,6 +4,7 @@
 
 
 <?php
+	session_start();
 	$ROOT = "";
 	require_once('./resources/includes/config.php');
 	include_once('./resources/includes/header.php'); 
@@ -29,6 +30,7 @@
 		<div id="bottomPanel">
 
 			<div id="controls">
+				<?php if (isset($_SESSION))
 				<li class="controls">
 					control01
 				</li>

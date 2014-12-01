@@ -18,7 +18,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 
     		if ($user_chk->fetch()) {
     			echo "Duplicate username.<br/><a href='create_user.php'>Back</a>";
-			//header('location: login.php');
     		}
     		else{
     			$prep = $pdo->prepare('INSERT INTO `players` (`name`, `allnaturalseasalt`, `password`,`email`,`faction`) VALUES (:username, :salt, :password, :email, :faction);');
@@ -65,8 +64,24 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	</p>
 	<p>
 	<label for='faction'>Faction:</label>
-	<input type='faction' id='faction' name='faction'>
-	<p>
+	<input type='faction' id='faction' name='faction'>"
+    try {
+        $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
+        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        $factions = $pdo->prepare('SELECT `factionID`,`factionName`,` FROM `factions` ORDER BY `factionID`');
+        $factions->execute();
+        $factions = $factions->fetch();
+        foreach ($factions as $faction) {
+            if ($faction['factionID'] != -1) {
+                echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>";
+                echo "<p>".$faction['description']."</p>";
+            }
+        }
+    }  catch(PDOException $e) {
+        echo "<p>Error loading factions..</p>";
+    }
+    echo "
+	</p>
 	<p><input type='submit' value='Create User'></p>
 	</form>
 	<p style='text-align:center;'><a href='login.php'> Back </a></p></div>
