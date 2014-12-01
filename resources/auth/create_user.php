@@ -50,7 +50,6 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<link rel='stylesheet' href='../css/style.css' type='text/css'/>
 	</head>
 	<form id='newUser' name='newUser' action='create_user.php' method='post'>
-	<a href='login.php'> Back </a>
 	<p>
 	<label for='username'>Username:</label>
 	<input type='name' id='username' name='username'>
@@ -69,6 +68,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<p>
 	<p><input type='submit' value='Create User'></p>
 	</form>
+	<p style='text-align:center;'><a href='login.php'> Back </a></p>
 	</html>";
 } 
 ?>
