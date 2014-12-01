@@ -1,4 +1,5 @@
 <?php
+
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['faction'])) {
 	require '../includes/config.php';
     $name = $config['DB_NAME']; //DB We're using from config
@@ -48,6 +49,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<title>RPI-S: create user</title>
 	<link rel='stylesheet' href='../css/style.css' type='text/css'/>
 	</head>
+	<div id='main2'>
 	<form id='newUser' name='newUser' action='create_user.php' method='post'>
 	<p>
 	<label for='username'>Username:</label>
@@ -67,6 +69,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<p>
 	<p><input type='submit' value='Create User'></p>
 	</form>
+	<p style='text-align:center;'><a href='login.php'> Back </a></p></div>
 	</html>";
 } 
 ?>

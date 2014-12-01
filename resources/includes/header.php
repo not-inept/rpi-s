@@ -40,7 +40,14 @@
 			<div id="cardInfo">
 				<h1>Player Info</h1>
 				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username']; ?></li>
-				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction']; ?></li>
+				<?php
+					$faction = $dbconn->prepare('SELECT `factionName` FROM `factions` WHERE `factionID` = :factionID');
+					$faction->execute(array(
+						':factionID' => $_SESSION['faction']
+						));
+					$faction_str = $faction->fetch();
+				?>
+				<li class="cardInfo" id="faction">Faction: <?php echo $faction_str; ?></li>
 				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp']; ?> / <?php echo $_SESSION['maxhp']; ?></li>
 				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade']; ?> </li>
 				<li class="cardInfo" id="exp">EXP: <?php echo $_SESSION['exp']; ?></li>

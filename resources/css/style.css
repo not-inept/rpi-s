@@ -178,7 +178,7 @@ li.navigation {
 }
 
 #login {
-	width: 250px;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
@@ -268,7 +268,7 @@ li.navigation {
 }
 
 #newUser {
-	width: 250px;
+	width: 350px;
 	margin-left: auto;
 	margin-right: auto;
 	margin-top: 100px;
@@ -276,6 +276,7 @@ li.navigation {
 	padding-top: 10px;
 	text-align: center;
 	border: 2px solid #FFFFFF;
+	opacity: 0.8;
 }
 
 #panelInfo {
