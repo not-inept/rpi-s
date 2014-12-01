@@ -276,6 +276,7 @@ li.navigation {
 	padding-top: 10px;
 	text-align: center;
 	border: 2px solid #FFFFFF;
+	opacity: 0.8;
 }
 
 #panelInfo {
