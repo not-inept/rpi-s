@@ -12,10 +12,10 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     	try {
 
-    		$user_chk = $dbconn->prepare('SELECT `name` FROM `players` WHERE name=:username');
+    		$user_chk = $pdo->prepare('SELECT `name` FROM `players` WHERE name=:username');
     		$user_chk->execute(array(':username' => $username));
 
-    		if (0) {
+    		if ($user_chk->fetch()) {
     			echo "Duplicate username.";
 			header('location: login.php');
     		}
