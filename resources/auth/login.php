@@ -69,7 +69,6 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 <?php else: ?>
   <div id="main2">
     <div id="login">
-      <a href="../../index.php" style="float:left;">Back</a>
       <h1>Login</h1>
       <?php if (isset($err)) echo "<p>$err</p>" ?>
       <form method="post" action="login.php">
@@ -84,6 +83,7 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
         <p><input name="create" type="submit" value="Create New User" /></p>
       </form>
     </div>
+      <a href="../../index.php">Back</a>
   </div>
 <?php endif; ?>
 </body>
