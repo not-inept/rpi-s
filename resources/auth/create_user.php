@@ -73,7 +73,8 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         $factions = $factions->fetch();
         foreach ($factions as $faction) {
             if ($faction['factionID'] != -1) {
-                echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>";
+                echo "</br>";
+                echo "<input type='radio' name='faction' value='".$faction["factionID"]."'>".$faction["factionName"];
                 echo "<p>".$faction['description']."</p>";
             }
         }
