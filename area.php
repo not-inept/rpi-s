@@ -19,10 +19,7 @@
 		<?php
 			if (isset($_GET['loc'])) {
 				//TODO: load image
-				echo "<p>Quadrant".string($_GET['loc'][0])."</p>";
-				echo "<p>Row".string($_GET['loc'][1])."</p>";
-				echo "<p>Column".string($_GET['loc'][2])."</p>";
-				echo "Area location: ".string($_GET['loc'][0]).string($_GET['loc'][1]).string($_GET['loc'][2]);
+				echo $_GET['loc'];
 			}
 		?>
 
