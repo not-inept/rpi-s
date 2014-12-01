@@ -66,4 +66,7 @@
 	</div>
 </body>
 
+<!-- improves performance by moving script files to bottom -->
+<script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="resources/js/area.js"></script>
 </html>

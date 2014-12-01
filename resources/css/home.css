@@ -13,7 +13,9 @@
 header{
 	display: block;
 	clear: both;
+	height: 360px;
 }
+
 .news h2 {
 	border-bottom: 2px solid #D0D0D0;
 	text-align: center;
@@ -21,9 +23,13 @@ header{
 
 #map {
 	height: 650px;
+	width: 740px;
 	background-repeat: no-repeat;
 	background-size: 100% 100%;
 	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 
 #map table {

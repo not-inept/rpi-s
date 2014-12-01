@@ -67,7 +67,6 @@ li.navigation {
 
 #bottomPanel {
 	position: relative;
-	top: 310px;
 	margin-left: auto;
 	margin-right: auto;
 	width: 740px;
@@ -199,7 +198,6 @@ li.navigation {
 }
 
 #main {
-	z-index: -50;
 	position: relative;
 	margin-left: auto;
 	margin-right: auto;
@@ -209,43 +207,6 @@ li.navigation {
 	margin-right: auto;
 	margin-left: auto;
 	opacity: 0.8;
-}
-
-#map {
-	position: relative;
-	top: 290px;
-	margin-left: auto;
-	margin-right: auto;
-	width: 740px;
-	height: 616px;
-}
-
-#map1 {
-	position: absolute;
-	width: 370px;
-	height: 308px;
-}
-
-#map2 {
-	position: absolute;
-	left: 370px;
-	width: 370px;
-	height: 308px;
-}
-
-#map3 {
-	position: absolute;
-	top: 308px;
-	width: 370px;
-	height: 308px;
-}
-
-#map4 {
-	position: absolute;
-	top: 308px;
-	left: 370px;	
-	width: 370px;
-	height: 308px;
 }
 
 #navigation {
