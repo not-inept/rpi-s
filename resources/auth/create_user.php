@@ -1,5 +1,4 @@
 <?php
-	include_once('../includes/header.php');
 
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['faction'])) {
 	require '../includes/config.php';
@@ -49,6 +48,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
 	<head>
 	<title>RPI-S: create user</title>
 	<link rel='stylesheet' href='../css/style.css' type='text/css'/>
+	<?php	include_once('../includes/header.php'); ?>
 	</head>
 	<form id='newUser' name='newUser' action='create_user.php' method='post'>
 	<p>
