@@ -8,11 +8,12 @@
 	        $events = $pdo->prepare('SELECT * FROM `events` WHERE eventID=:id');
 	    	$events->execute(array(':id' => $_GET['eventID']));
 	        $event = $events->fetch();
-	        $action_points = intval($_SESSION['points']);
+	        $action_points = (int) $_SESSION['points'];
+	        $action_cost = (int) $event['actionCost'];
 	        $actionParam = $event['actionParam'];
 	        echo "Entering if...";
-	        if ($actionPoints >= intval($event['actionCost'])) {
-	        	$new_points = $action_points - intval($event['actionCost']);
+	        if ($action_points >= $action_cost)) {
+	        	$new_points = $action_points - $action_cost;
 	        	echo $new_points;
 		        if ($event['actionType'] == "move") {
 		        	$prep = $pdo->prepare('INSERT INTO `players` (`current_location`, `action_points`) VALUES (:location, :points) WHERE  playerID = :id;');
@@ -24,8 +25,7 @@
 	    			$loc = explode(",",$_SESSION['current_location']);
 	    			$_SESSION['current_location'] = $actionParam;
 	    			$_SESSION['points'] = $new_points;
-	    			$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>";
-	    			$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ moveto ".$_SESSION['current_location']."<br>";
+	    			$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ moveto ".$_SESSION['current_location']."<br>";
 	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
