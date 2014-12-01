@@ -12,12 +12,12 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     	$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     	try {
 
-    		$user_chk = $dbconn->prepare('SELECT name FROM `players` WHERE name=:username');
+    		$user_chk = $dbconn->prepare('SELECT `name` FROM `players` WHERE name=:username');
     		$user_chk->execute(array(':username' => $username));
 
     		if ($user_chk->fetch()) {
     			echo "Duplicate username.";
-            	header('location: create_user.php');
+			//header('location: create_user.php');
     		}
     		else{
     			$prep = $pdo->prepare('INSERT INTO `players` (`name`, `allnaturalseasalt`, `password`,`email`,`faction`) VALUES (:username, :salt, :password, :email, :faction);');
