@@ -17,7 +17,7 @@
 	        	$new_points = $action_points - $action_cost;
 	        	echo $new_points;
 		        if ($event['actionType'] == "move") {
-		        	$prep = $pdo->prepare('UPDATE `players` SET (`current_location`, `action_points`) VALUES (:location, :points) WHERE  playerID = :id;');
+		        	$prep = $pdo->prepare('UPDATE `players` SET current_location=:location, action_points=:points WHERE  playerID = :id;');
 	    			$prep->execute(array(
 	    				':location' => $actionParam,
 	    				':points' => $new_points,
