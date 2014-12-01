@@ -19,7 +19,7 @@ $(document).ready(function() {
 	loadNewMap(false);
 	function setLocation(locString) {
 		var uname = "anon"
-		if $('#name').length) {
+		if ($('#name').length) {
 			var uname = $('#name').html().split(':')[1].trim();
 		}
 		$('#location').html(uname + "@rpi-s: " + locString);
