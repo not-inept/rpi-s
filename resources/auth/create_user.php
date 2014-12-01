@@ -17,7 +17,7 @@
  
       	  if ($user_chk->fetch()) {
             echo "Duplicate username.";
-            header('location: create_user.php');
+            //header('location: create_user.php');
           }
       	  else{
           	$prep = $pdo->prepare('INSERT INTO `players` (`name`, `allnaturalseasalt`, `password`,`email`,`faction`) VALUES (:username, :salt, :password, :email, :faction);');
