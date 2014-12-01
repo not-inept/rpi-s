@@ -69,7 +69,7 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
 <?php else: ?>
   <div id="main2">
     <div id="login">
-      <a href="../../index.php">Back</a>
+      <a href="../../index.php" style="float:left;">Back</a>
       <h1>Login</h1>
       <?php if (isset($err)) echo "<p>$err</p>" ?>
       <form method="post" action="login.php">
