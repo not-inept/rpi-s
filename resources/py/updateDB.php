@@ -8,14 +8,15 @@ $feed = json_decode($file);
 
 // Prepared statement to database:
 $stmt = $dbconn->prepare(
-	'INSERT INTO `events` (`title`, `description`, `location`, `date`, `quest`)
-	 VALUES  (:title, :description, :location, :datestamp, 0);');
+	'INSERT INTO `events` (`title`, `description`, `location`, `date`, `quest`, `areaID`)
+	 VALUES  (:title, :description, :location, :datestamp, 0, :areaID);');
 for ($i = 0; $i < count($feed); $i++){
 	$stmt->execute(array(
 		':title' => $feed[$i]->{'title'},
 		':description' => $feed[$i]->{'description'},
 		':location' => $feed[$i]->{'location'},
-		':datestamp' => strtotime($feed[$i]->{'date'}) + 3600
+		':datestamp' => strtotime($feed[$i]->{'date'}) + 3600,
+		':areaID' => $feed[$i]->{'areaID'}
 		));
 }
 
