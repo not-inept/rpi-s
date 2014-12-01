@@ -17,8 +17,9 @@ $(document).ready(function() {
 	// versions to ensure correct image is loaded in the browser
 	var version = 1;
 	loadNewMap(false);
+
 	function setLocation(locString) {
-		var uname = "anon"
+		var uname = "anon";
 		if ($('#name').length) {
 			var uname = $('#name').html().split(':')[1].trim();
 		}
@@ -35,8 +36,9 @@ $(document).ready(function() {
 		if (mapName == "map_0_0_1") {
 			setLocation('/campus_map/main_map/');
 		} else {
-			setLocation('/campus_map/main_map/'+mapName+'/');
-		}	
+			setLocation('/campus_map/main_map/' + mapName + '/');
+		}
+
 		if(fade) {
 			map.fadeOut(300, function() {
 				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');

@@ -8,6 +8,14 @@ $(document).ready(function() {
 	var version = 1;
 	loadNewMap(false);
 
+	function setLocation(locString) {
+		var uname = "anon";
+		if ($('#name').length) {
+			var uname = $('#name').html().split(':')[1].trim();
+		}
+		$('#location').html(uname + "@rpi-s: " + locString);
+	}
+
 	function loadNewMap(fade) {
 		if(typeof fade === 'undefined') {
 			fade = true;
