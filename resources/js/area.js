@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	var mapName = section + '/' + row + '_' + column;
 	determineArrows();
-	setLocation('/campus_map/' + mapName + '/');
+	setLocation('/campus_map/' + mapName + '$');
 
 	function setLocation(locString) {
 		var uname = "anon";

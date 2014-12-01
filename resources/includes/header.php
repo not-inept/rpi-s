@@ -14,6 +14,8 @@
 	<title>RPI-S</title>
 	<link rel="stylesheet" href="resources/css/style.css" type="text/css"/>
 	<link rel="stylesheet" href="resources/css/home.css" type="text/css"/>
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	<link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 
 <header>

@@ -1,12 +1,28 @@
 <?php 
-function parseActionText($actionText,$actionParam) {
+function parseActionText($actionText,$actionParam,$actionCost) {
 	//allows to add rule macros for movement, etc
-	$actionText = str_replace(":L",$actionParam,$actionText);
+	if (str_replace(":L","BLARRRRGH",$actionText) != $actionText) {
+		//We know it is movement
+		try {
+	        $name = $config['DB_NAME']; //DB We're using from config
+	        $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
+	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $events = $pdo->prepare('SELECT `name` FROM `areas` WHERE areaID=:id');
+	    	$events->execute(array(':id' => $actionParam));
+	        $result = $events->fetch();
+	        $replace = $result['name'];
+        }  catch(PDOException $e) {
+        	$replace = "<p>Error loading location..</p>";
+    	}
+		$actionText = str_replace(":L",$replace,$actionText);
+	}
+	$actionText .= "<br><br>(costs ".$actionCost." action points)";
 	return $actionText;
 }
 
 if (isset($_SESSION['username'])) { //if active user & user character in location
 	if (isset($_SESSION['current_location']) && $_SESSION['current_location'] == $_GET['loc']) {
+		//Generate event based commands
 		try {
 	        $name = $config['DB_NAME']; //DB We're using from config
 	        $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
@@ -17,7 +33,7 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 	        foreach ($result as $event) {
         		echo "<li class='control'>";
         		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
-        		echo parseActionText($event['actionText'],$event['actionParam']);
+        		echo parseActionText($event['actionText'],$event['actionParam'],$event['actionCost']);
 				echo "</li>";
             }
         }  catch(PDOException $e) {

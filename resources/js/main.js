@@ -35,7 +35,7 @@ $(document).ready(function() {
 		if (mapName == "map_0_0_1") {
 			setLocation('/campus_map/main_map/');
 		} else {
-			setLocation('/campus_map/main_map/' + mapName + '/');
+			setLocation('/campus_map/main_map/' + mapName + '$');
 		}
 
 		if(fade) {

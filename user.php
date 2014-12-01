@@ -22,6 +22,10 @@ if (isset($_SESSION['username'])){
         ?>
         </ul>
         </section>
+
+        </section id="changeFaction">
+
+        </section>
 </body>
 
 <script type="text/javascript" src="resources/js/jquery-2.1.1.min.js"></script>
@@ -30,6 +34,6 @@ var uname = "anon";
 if ($('#name').length) {
         var uname = $('#name').html().trim();
 }
-$('#location').html(uname + "@rpi-s: " + "~/inventory/");
+$('#location').html(uname + "@rpi-s: " + "~/inventory$");
 </script>
 </html>
