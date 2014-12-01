@@ -1,6 +1,6 @@
 <?php
 
-require 'C:\Users\Daniel BC\Dropbox\Public\College\Websys\Term Project\rpi-s-master\resources\includes\config.php';
+require '../resources/includes/config.php';
 
 $dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
 
