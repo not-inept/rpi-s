@@ -18,7 +18,7 @@
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
 				$mapString .= " style='background-image: url(resources/images/maps/";
-				$mapString .= $loc[0];
+				$mapString .= $loc['0'];
 				//."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
 				$mapString .= "> Not a valid location! D:";
