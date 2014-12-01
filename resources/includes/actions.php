@@ -29,7 +29,7 @@
 	    			$_SESSION['points'] = $new_points;
 	    			$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ moveto ".$_SESSION['current_location']."<br>";
 	    			header("location: ../../area.php?loc=$actionParam");
-		        } elseif ($event['actionType'] == "enemy") {
+		        } /*elseif ($event['actionType'] == "enemy") {
 	        		$enemies = $pdo->prepare('SELECT * FROM `enemies` WHERE enemyID=:id');
 	    			$enemies->execute(array(':id' => $actionParam));
 	        		$enemy = $enemies->fetch();
@@ -67,7 +67,7 @@
 	    			$_SESSION['points'] = $new_points;
 	    			$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
 	    			header("location: ../../area.php?loc=$_SESSION['current_location']");
-		        }
+		        }*/
 		    } else {
 		    	echo $_SESSION['points'];
 		    	echo $action_points;
