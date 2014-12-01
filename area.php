@@ -18,6 +18,7 @@
 			$mapString = "<div id='map'";
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
+				echo count($loc);
 				$mapString += " style='background-image: url(resources/images/maps/";
 				$mapString += string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
