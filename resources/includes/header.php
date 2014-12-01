@@ -37,11 +37,7 @@
 		<div id="card">
 		<?php if (isset($_SESSION['username'])): ?>
 			<div id="cardInfo">
-				<h1>Player Info</h1>
-				<li class="cardInfo" id="name">Name: <?php echo $_SESSION['username']; ?></li>
-				<?php
-					
-				?>
+				<h1 id="name"><?php echo $_SESSION['username']; ?></h1>
 				<li class="cardInfo" id="faction">Faction: <?php echo $_SESSION['faction_str']; ?></li>
 				<li class="cardInfo" id="health">HP: <?php echo $_SESSION['hp']; ?> / <?php echo $_SESSION['maxhp']; ?></li>
 				<li class="cardInfo" id="grade">Grade: <?php echo $_SESSION['grade_str']; ?> </li>

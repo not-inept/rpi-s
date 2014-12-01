@@ -21,7 +21,7 @@ $(document).ready(function() {
 	function setLocation(locString) {
 		var uname = "anon";
 		if ($('#name').length) {
-			var uname = $('#name').html().split(':')[1].trim();
+			var uname = $('#name').html().trim();
 		}
 		$('#location').html(uname + "@rpi-s: " + locString);
 	}

@@ -7,7 +7,7 @@ if (isset($_SESSION['username'])) {
 		<li class='control'>
 		<a href='
 		area.php?loc=".$_SESSION['current_location']."
-		''>[ insert card ] to play</a>
+		''>Your character appears to be elsewhere.</a>
 		</li>";
 	}
 } else {
