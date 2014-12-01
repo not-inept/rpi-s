@@ -90,7 +90,7 @@
 		   		echo $action_points;
 		   		echo intval($event['actionCost']);
 		   		echo "not enough ap bud";
-		   		$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ ERROR: Failed. Insufficient AP Remaining.<br>";
+		   		$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>"."ERROR: Failed. Insufficient AP Remaining.<br>";
 	    		$newLocation = $_SESSION['current_location'];
 	    		header("location: ../../area.php?loc=$newLocation");
 			}
