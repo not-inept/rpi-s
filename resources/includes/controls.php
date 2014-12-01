@@ -17,7 +17,23 @@ function parseActionText($config, $actionText,$actionParam,$actionCost) {
     	}
 		$actionText = str_replace(":L",$replace,$actionText);
 	}
-	$actionText .= "<br><br>(costs ".$actionCost." action points)";
+	if (str_replace(":E","BLARRRRGH",$actionText) != $actionText) {
+		//We know it is an enemy
+		try {
+	        $name = $config['DB_NAME']; //DB We're using from config
+	        $pdo = new PDO("mysql:host=localhost;dbname=$name", $config['DB_USERNAME'], $config['DB_PASSWORD']);
+	        $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+	        $events = $pdo->prepare('SELECT `name` FROM `enemies` WHERE enemyID=:id');
+	    	$events->execute(array(':id' => $actionParam));
+	        $result = $events->fetch();
+	        $replace = $result['name'];
+        }  catch(PDOException $e) {
+        	$replace = "...Error loading enemy.";
+        	$replace.= $e;
+    	}
+		$actionText = str_replace(":E",$replace,$actionText);
+	}
+	$actionText .= "<br><br>(costs ".$actionCost." action points)<br><br>";
 	return $actionText;
 }
 
