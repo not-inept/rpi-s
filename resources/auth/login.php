@@ -24,7 +24,7 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
   $salt = ($res) ? $res['allnaturalseasalt'] : '';
 
   $salted = hash('sha256', $salt.$_POST['pass']);
-  $login_stmt = $dbconn->prepare('SELECT playerID, name, faction, grade, exp, hp, maxhp   FROM players WHERE name=:username AND password=:pass');
+  $login_stmt = $dbconn->prepare('SELECT * FROM players WHERE name=:username AND password=:pass');
   $login_stmt->execute(array(':username' => $_POST['username'], ':pass' => $salted));
   
   if ($user = $login_stmt->fetch()) {
@@ -40,29 +40,17 @@ if (isset($_POST['login']) && $_POST['login'] == 'Login') {
       ':factionNum' =>$_SESSION['faction']
       ));
     $faction_str = $faction->fetchcolumn(0);
-    $grade = $dbconn->prepare('SELECT `name` FROM `grades` WHERE `id` = :grade;');
+    $grade = $dbconn->prepare('SELECT `name`,`maxEXP` FROM `grades` WHERE `id` = :grade;');
     $grade->execute(array(
       ':grade' => $user['grade']
       ));
-    $grade_str = $grade->fetchcolumn(0);
-    $explim = $dbconn->prepare('SELECT `maxEXP` FROM `grades` WHERE `id` = :grade;');
-    $explim->execute(array(
-      ':grade' => $user['grade']
-    ));
-    $maxxp = $explim->fetchcolumn(0);
-    $loc = $dbconn->prepare('SELECT `current_location`, `active_quest`, `action_points` FROM `players` WHERE `name` = :username');
-    $loc->execute(array(
-      ':username' => $user['name']
-      ));
-    $location = $loc->fetchcolumn(0);
-    $quest = $loc->fetchcolumn(1);
-    $points = $loc->fetchcolumn(2);
-    $_SESSION['grade_str'] = $grade_str;
+    $grade_data = $grade->fetch();
+    $_SESSION['grade_str'] = $grade_data['name'];
     $_SESSION['faction_str'] = $faction_str;
-    $_SESSION['maxxp'] = $maxxp;
-    $_SESSION['location'] = $location;
-    $_SESSION['quest'] = $quest;
-    $_SESSION['points'] = $points;
+    $_SESSION['maxxp'] = $grade_data['maxEXP'];
+    $_SESSION['current_location'] = $user['current_location'];
+    $_SESSION['quest'] = $user['active_quest'];
+    $_SESSION['points'] = $user['action_points'];
     header("Location: ../../index.php");
   }
   else {
