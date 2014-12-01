@@ -58,7 +58,7 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 	        		echo "<li class='control'>";
 	        		echo "<a href='resources/includes/actions.php?eventID=".$event['eventID']."'>";
 	        		echo parseActionText($config, $event['actionText'],$event['actionParam'],$event['actionCost']);
-					echo "</li>";
+					echo "</a></li>";
 	            }
         	}
         }  catch(PDOException $e) {
