@@ -37,7 +37,8 @@
 	        		$damage = 0; $hits = 0;
 	        		$new_exp = $_SESSION['exp'];
 	        		while ($hits < $enemy['hits']) {
-	        			$curDam = rand(0,(int) $enemey['maxDamage'] - $damage);
+	        			$damMax = (int) $enemy['maxDamage'] - $damage;
+	        			$curDam = rand(0,$damMax);
 	        			$damage += $curDam;
 	        			$cmd .= $enemy['name']." attacks for ".$curDam." hp<br>";
 	        			$hits++;
