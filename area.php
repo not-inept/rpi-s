@@ -15,18 +15,18 @@
 
 
 		<!-- TODO: Change map to individual image, allow navigation out -->
-		<div id="map">
+		<!-- Div closed in php, setting image as background -->
 			
 		<?php
+			echo "<div id='map'";
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']));
-				echo "<img src='resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png'>";
+				echo " style='background-image: url(resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
-				echo "Not a valid location! D:";
+				echo ">Not a valid location! D:";
 			}
+			echo "</div>";
 		?>
-
-		</div>
 
 		<!-- TODO: Use PHP to generate buttons/panel -->
 		<div id="bottomPanel">
