@@ -10,8 +10,10 @@
 	        $event = $events->fetch();
 	        $action_points = intval($_SESSION['points']);
 	        $actionParam = $event['actionParam'];
+	        echo "Entering if...";
 	        if ($actionPoints >= intval($event['actionCost'])) {
 	        	$new_points = $action_points - intval($event['actionCost']);
+	        	echo $new_points;
 		        if ($event['actionType'] == "move") {
 		        	$prep = $pdo->prepare('INSERT INTO `players` (`current_location`, `action_points`) VALUES (:location, :points) WHERE  playerID = :id;');
 	    			$prep->execute(array(
