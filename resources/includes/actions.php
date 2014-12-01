@@ -29,7 +29,7 @@
 	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
-		    	$_SESSION["cmd"] = $actionType;
+		    	echo "not enough ap bud";
 		    }
         }  catch(PDOException $e) {
         	echo $e;
