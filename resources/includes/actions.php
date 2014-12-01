@@ -28,7 +28,7 @@
 	    			$_SESSION['points'] = $new_points;
 	    			$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ moveto ".$_SESSION['current_location']."<br>";
 	    			header("location: ../../area.php?loc=$actionParam");
-		        } /*elseif ($event['actionType'] == "enemy") {
+		        } elseif ($event['actionType'] == "enemy") {
 	        		$enemies = $pdo->prepare('SELECT * FROM `enemies` WHERE enemyID=:id');
 	    			$enemies->execute(array(':id' => $actionParam));
 	        		$enemy = $enemies->fetch();
@@ -65,18 +65,20 @@
 	    			$loc = explode(",",$_SESSION['current_location']);
 	    			$_SESSION['points'] = $new_points;
 	    			$_SESSION['cmd'] .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
-	    			header("location: ../../area.php?loc=$_SESSION['current_location']");
-		        }*/
-		    } else {
-		    	echo $_SESSION['points'];
-		    	echo $action_points;
-		    	echo intval($event['actionCost']);
-		    	echo "not enough ap bud";
-		    	$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ ERROR: Failed. Insufficient AP Remaining.<br>";
-	    		header("location: ../../area.php?loc=$_SESSION['current_location']");
-		    }
-        }  catch(PDOException $e) {
+	    			$newLocation = $_SESSION['current_location'];
+	    			header("location: ../../area.php?loc=$newLocation");
+		        }
+			} else {
+		   		echo $_SESSION['points'];
+		   		echo $action_points;
+		   		echo intval($event['actionCost']);
+		   		echo "not enough ap bud";
+		   		$_SESSION['cmd'] = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>".$_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ ERROR: Failed. Insufficient AP Remaining.<br>";
+	    		$newLocation = $_SESSION['current_location'];
+	    		header("location: ../../area.php?loc=$newLocation");
+			}
+    	}  catch(PDOException $e) {
         	echo $e;
-    	}
+        }
     }
 ?>
