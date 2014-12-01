@@ -32,7 +32,7 @@
 	        		$enemies = $pdo->prepare('SELECT * FROM `enemies` WHERE enemyID=:id');
 	    			$enemies->execute(array(':id' => $actionParam));
 	        		$enemy = $enemies->fetch();
-	        		$cmd = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>"
+	        		$cmd = $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ expendAP ".$event['actionCost']."<br>";
 	        		$cmd .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
 	        		$damage = 0; $hits = 0;
 	        		$new_exp = $_SESSION['exp'];
