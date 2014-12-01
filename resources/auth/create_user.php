@@ -16,7 +16,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     		$user_chk->execute(array(':username' => $username));
 
     		if ($user_chk->fetch()) {
-    			echo "Duplicate username.";
+    			echo "Duplicate username.<br/><a href='create_user.php'>Back</a>";
 			//header('location: login.php');
     		}
     		else{
