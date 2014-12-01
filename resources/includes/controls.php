@@ -33,7 +33,7 @@ function parseActionText($config, $actionText,$actionParam,$actionCost) {
     	}
 		$actionText = str_replace(":E",$replace,$actionText);
 	}
-	$actionText .= "<br><br>(costs ".$actionCost." action points)<br><br>";
+	$actionText .= " (costs ".$actionCost." action points)<br><br>";
 	return $actionText;
 }
 
