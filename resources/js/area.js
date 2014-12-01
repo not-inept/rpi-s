@@ -12,12 +12,12 @@ $(document).ready(function() {
 		var uname = "anon";
 		var extra = "";
 		if ($('#name').length) {
-			var uname = $('#name').html().trim();
+			uname = $('#name').html().trim();
 		}
 		if ($('#noOneCares').length) {
-			var extra = $('#noOneCares').html().trim();
+			extra = $('#noOneCares').html().trim();
 		}
-		$('#location').html(uname + "@rpi-s: " + locString + " " + extra);
+		$('#location').html(extra + uname + "@rpi-s: " + locString);
 	}
 
 	function determineArrows() {
