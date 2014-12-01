@@ -16,23 +16,14 @@
 		<?php
 
 			$mapString = "<div id='map'";
-			//$loc = explode(",",$_GET['loc']);
-			$loc = array(
-				0 => 1,
-				1 => 2,
-				2 => 3
-			);
-			$mapString .= " style='background-image: url(resources/images/maps/";
-			$mapString .= $loc[0];
-			$mapString .= "/".string($loc[1])."_".string($loc[2]).".png);'>";
-			/*if (isset($_GET['loc'])) {				
+			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
 				$mapString .= " style='background-image: url(resources/images/maps/";
 				$mapString .= $loc[0] . "/" . $loc[1] . "_" . $loc[2] . ".png);'";
 			} else {
 				$mapString .= "> Not a valid location! D:";
 			}
-			$mapString .= "></div>";*/
+			$mapString .= "></div>";
 			echo $mapString;
 		?>
 
