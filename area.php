@@ -15,14 +15,15 @@
 		<!-- Div closed in php, setting image as background -->
 			
 		<?php
-			echo "<div id='map'";
+			$mapString = "<div id='map'";
 			if (isset($_GET['loc'])) {				
 				$loc = explode(",",$_GET['loc']);
-				echo " style='background-image: url(resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
+				$mapString += " style='background-image: url(resources/images/maps/".string($loc[0])."/".string($loc[1])."_".string($loc[2]).".png);'>";
 			} else {
-				echo ">Not a valid location! D:";
+				$mapString += ">Not a valid location! D:";
 			}
-			echo "</div>";
+			$mapString += "</div>";
+			echo $mapString;
 		?>
 
 		<!-- TODO: Use PHP to generate buttons/panel -->
