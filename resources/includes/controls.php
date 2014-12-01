@@ -1,6 +1,6 @@
 <?php 
 if (isset($_SESSION['username'])) {
-	if (isset($_SESSION['current_location']) && $_SESSION['current_location'] == $_GET['loc'])) {
+	if (isset($_SESSION['current_location']) && $_SESSION['current_location'] == $_GET['loc']) {
 
 	} else {
 		echo "
