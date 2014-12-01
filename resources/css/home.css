@@ -8,7 +8,6 @@
 header{
 	display: block;
 	clear: both;
-	height: 360px;
 }
 
 .news h2 {
@@ -25,6 +24,7 @@ header{
 	margin-left: auto;
 	margin-right: auto;
 	margin-bottom: 20px;
+	margin-top: 20px;
 }
 
 #map table {
