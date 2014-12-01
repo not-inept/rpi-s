@@ -1,4 +1,4 @@
-#team,#faq {
+#team , #faqDiv{
 	text-align: center;
 	position: relative;
 	top: 35px;
@@ -17,6 +17,7 @@
 	font-size: 3em;
 	font-family: 'Anonymous Pro';
 }
+
 span .name{
 	float:left;
 	width:200px;

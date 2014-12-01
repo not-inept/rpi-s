@@ -7,7 +7,7 @@
 	<div class="container">
 		<?php include './resources/includes/header.php' ?>
 	</div>
-	<div id = "faq">
+	<div id = "faqDiv">
 		<p> Questions will be updated on the site as they are asked.</p>
 	</div>
 </body>
