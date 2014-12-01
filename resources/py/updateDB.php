@@ -16,7 +16,7 @@ for ($i = 0; $i < count($feed); $i++){
 		':description' => $feed[$i]->{'description'},
 		':location' => $feed[$i]->{'location'},
 		':datestamp' => strtotime($feed[$i]->{'date'}) + 3600,
-		':area' => $feed[$i]->{'areaID'}n
+		':area' => $feed[$i]->{'areaID'}
 		));
 }
 
