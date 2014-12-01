@@ -49,10 +49,20 @@
 	        			$new_hp = 0;
 	        			$new_exp = $_SESSION['exp'];
 	        			$new_points = 0;
-	        			$cmd .= $_SESSION['name']." killed you D:";
+	        			$cmd .= $_SESSION['name']." killed you D:<br>";
+	        		} else {
+	        			$cmd .= $enemy['name']." feinted, you gained ".$new_exp." experience points<br>";
 	        		}
 	        		if ($new_exp > (int) $_SESSION['maxxp']) {
 	        			$new_grade++;
+	        			$cmd .= "grade promoted to ".$new_grade."<br>";
+	        			$grade = $dbconn->prepare('SELECT `name`,`maxEXP` FROM `grades` WHERE `id` = :grade;');
+    					$grade->execute(array(
+      						':grade' => $new_grade
+      					));
+    					$grade_data = $grade->fetch();
+    					$_SESSION['maxxp'] = $grade_data['maxEXP'];
+    					$_SESSION['grade_str'] = $grade_data['name'];
 	        		}
 		        	$prep = $pdo->prepare('UPDATE `players` SET hp=:hp, action_points=:points, exp=:exp, grade=:grade WHERE  playerID = :id;');
 	    			$prep->execute(array(
@@ -64,8 +74,9 @@
 	    				));
 	    			$loc = explode(",",$_SESSION['current_location']);
 	    			$_SESSION['points'] = $new_points;
-	    			$cmd .= $_SESSION['username']."@rpi-s: "."/campus_map/".$loc[0]."/".$loc[1]."_".$loc[2]."$ attack ".$enemy['name']."<br>";
 	    			$_SESSION['cmd'] = $cmd;
+	    			$_SESSION['exp'] = $new_exp;
+	    			$_SESSION['grade'] = $new_grade;
 	    			$newLocation = $_SESSION['current_location'];
 	    			header("location: ../../area.php?loc=$newLocation");
 		        }
