@@ -15,8 +15,6 @@ $(document).ready(function() {
 
 		var mapName = section + '/' + row + '_' + column;
 		var map = $('#map');
-		$('#location').html(mapName);
-
 		if(fade) {
 			map.fadeOut(300, function() {
 				map.css('background-image', 'url(resources/images/maps/' + mapName + '.png)');
