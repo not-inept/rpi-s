@@ -79,6 +79,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
         }
     }  catch(PDOException $e) {
         echo "<p>Error loading factions..</p>";
+        echo $e;
     }
     echo "
 	</p>
