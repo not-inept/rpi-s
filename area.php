@@ -19,7 +19,7 @@
 		<?php
 			if (isset($_GET['loc'])) {
 				//TODO: load image
-				echo $_GET['loc'];
+				print_r(explode(",",$_GET['loc']));
 			}
 		?>
 

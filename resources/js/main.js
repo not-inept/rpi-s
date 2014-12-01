@@ -4,10 +4,10 @@ $(document).ready(function() {
 	// these can be changed later :)
 	var locations = {
 		'MAIN' : 'main',
-		'LEGEND' : 'legend',
-		'ECAV' : 'ecav',
-		'ACADEMICS' : 'academics',
-		'DORMS' : 'dorms'
+		'LEGEND' : 1,
+		'ECAV' : 2,
+		'ACADEMICS' : 3,
+		'DORMS' : 4
 	};
 	var section = locations.MAIN;
 	var row = 0, column = 0;
@@ -79,9 +79,7 @@ $(document).ready(function() {
 		} else {
 			var innerRow = $(this).closest("tr").data('row');
 			var innerColumn = $(this).data('column');
-
-			console.log("The row is " + innerRow + " and the column is " + innerColumn + " and section " + section + "\n");
-			var location = 'area.php?loc=' + section + '&row=' + innerRow + '&column' + innerColumn;
+			var location = 'area.php?loc=' + section + ',' + innerRow + ',' + innerColumn;
 			window.location.href = location;
 		}
 	});
