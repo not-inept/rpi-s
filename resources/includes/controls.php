@@ -1,5 +1,5 @@
 <?php 
-function parseActionText($actionText,$actionParam,$actionCost) {
+function parseActionText($conifg, $actionText,$actionParam,$actionCost) {
 	//allows to add rule macros for movement, etc
 	if (str_replace(":L","BLARRRRGH",$actionText) != $actionText) {
 		//We know it is movement
@@ -41,7 +41,7 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 		        foreach ($result as $event) {
 	        		echo "<li class='control'>";
 	        		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
-	        		echo parseActionText($event['actionText'],$event['actionParam'],$event['actionCost']);
+	        		echo parseActionText($config, $event['actionText'],$event['actionParam'],$event['actionCost']);
 					echo "</li>";
 	            }
         	}
