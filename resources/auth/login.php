@@ -83,7 +83,7 @@ if (isset($_SESSION['username']) && isset($_POST['logout']) && $_POST['logout'] 
         <p><input name="create" type="submit" value="Create New User" /></p>
       </form>
     </div>
-      <a href="../../index.php">Back</a>
+      <a href="../../index.php" style="margin:auto;">Back</a>
   </div>
 <?php endif; ?>
 </body>
