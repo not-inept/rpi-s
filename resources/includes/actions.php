@@ -29,7 +29,7 @@
 	    			header("location: ../../area.php?loc=$actionParam");
 		        }
 		    } else {
-		    	echo $actionPoints;
+		    	echo $action_points;
 		    	echo intval($event['actionCost']);
 		    	echo "not enough ap bud";
 		    }
