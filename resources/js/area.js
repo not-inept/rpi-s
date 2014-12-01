@@ -10,10 +10,14 @@ $(document).ready(function() {
 
 	function setLocation(locString) {
 		var uname = "anon";
+		var extra = "";
 		if ($('#name').length) {
 			var uname = $('#name').html().trim();
 		}
-		$('#location').html(uname + "@rpi-s: " + locString);
+		if ($('#noOneCares').length) {
+			var extra = $('#noOneCares').html().trim();
+		}
+		$('#location').html(uname + "@rpi-s: " + locString + " " + extra);
 	}
 
 	function determineArrows() {

@@ -36,7 +36,7 @@
 			<div id="controls">
 				<?php include './resources/includes/controls.php'; ?>
 			</div>
-			
+
 			<div id="panelInfo">
 				<?php include './resources/includes/loadMapPanel.php'; ?>
 			</div>
@@ -47,6 +47,14 @@
 
 		</div>
 
+		<?php 
+			if (isset($_SESSION['cmd']) && $_SESSION['cmd'] != "no") {
+				echo "<div style='display: none;' id='noOneCares'>";
+				echo $_SESSION['cmd'];
+				echo "</div>";
+				$_SESSION['cmd'] = "no";
+			}
+		?>
 
 	</div>
 </body>

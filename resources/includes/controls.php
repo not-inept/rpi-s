@@ -40,7 +40,7 @@ if (isset($_SESSION['username'])) { //if active user & user character in locatio
 	        } else {
 		        foreach ($result as $event) {
 	        		echo "<li class='control'>";
-	        		echo "<a href='action.php?actionType=".$event['actionType']."&actionParam=".$event['actionParam']."'>";
+	        		echo "<a href='resources/includes/action.php?eventID=".$event['eventID']."'>";
 	        		echo parseActionText($config, $event['actionText'],$event['actionParam'],$event['actionCost']);
 					echo "</li>";
 	            }
