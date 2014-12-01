@@ -1,4 +1,6 @@
 <?php
+	include_once('../includes/header.php');
+
 if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['email']) && isset($_POST['faction']) && !empty($_POST['username']) && !empty($_POST['password']) && !empty($_POST['email']) && !empty($_POST['faction'])) {
 	require '../includes/config.php';
     $name = $config['DB_NAME']; //DB We're using from config
