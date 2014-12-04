@@ -1,8 +1,6 @@
 <?php
-// This php script will push json data to the database:
 require "../includes/config.php";
 require "../includes/connect.php";
-// Import json file and read it in:
 
 
 // Prepared statement to database:

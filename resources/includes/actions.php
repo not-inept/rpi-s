@@ -53,7 +53,7 @@
 	        			$cmd .= $_SESSION['name']." killed you D:<br>";
 	        		} else {
 	        			$expToDisp = $new_exp - (int) $_SESSION['exp'];
-	        			$cmd .= $enemy['name']." feinted, you gained ".$expToDisp." experience points<br>";
+	        			$cmd .= $enemy['name']." fainted, you gained ".$expToDisp." experience points<br>";
 	        		}
 	        		if ($new_exp > (int) $_SESSION['maxxp']) {
 	        			$new_grade++;

@@ -22,4 +22,9 @@ We used HTML5 and CSS3 to style RPI-S. Our site was based on a variety of other 
 
 
 ###JavaScript & jQuery
-Our client-side code is located in `main.js`. This code handles various functions to alter the UI based on the players position. It keeps track of the players location, determines what actions to follow upon a button click, and the row and column index within the map. Using the row and column index, the navigation buttons are set visible or hidden. The `area.php` file has a specific javascript file with similar functionality as the main javascript file, but altered slightly for different user interactions. 
+Our client-side code is located in `main.js`. This code handles various functions to alter the UI based on the player's position. It keeps track of the players location, determines what actions to follow upon a button click, and the row and column index within the map. Using the row and column index, the navigation buttons are set visible or hidden. The `area.php` file has a specific javascript file with similar functionality as the main javascript file, but altered slightly for different user interactions. 
+
+###Timed Database Maintenace
+Morning Mail and Player Stats: In order to run optimally and serve dynamic daily content, RPI - S requires timed calls to several maintenance scripts. The event_mail.py script, located in resources/py/, parses data from morningmail.rpi.edu/rss and sends the parsed information to the events table. Ideally, this script should be run after midnight every day to receive new campus events. To make sure player health and action points are replenished, the manage_udata.py script located in resources/py/ should also be run several times daily.
+
+We recommend running RPI - S on a UNIX-based system, as timed services can very easily be implemented using the cron service. More information can be found at http://en.wikipedia.org/wiki/Cron.
