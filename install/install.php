@@ -299,6 +299,5 @@ INSERT INTO `inventory` (`playerID`, `objID`, `equipped`, `id`) VALUES
 (2, 10, 1, 5),
 (2, 3, 1, 6);
 ");
-
 	$stmt->execute();
 ?>
