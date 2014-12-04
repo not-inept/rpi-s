@@ -1,7 +1,9 @@
 <!doctype html>
 <html>
 <?php
-require 'resources/includes/header.php';
+$ROOT = "";
+require_once('./resources/includes/config.php');
+include_once('./resources/includes/header.php');
 if (isset($_SESSION['username'])){
 	$stmt = $dbconn->prepare('SELECT o.* FROM inventory i, objects o WHERE i.playerID=:usernum AND o.objID=i.objID;');
         $stmt->execute(array(

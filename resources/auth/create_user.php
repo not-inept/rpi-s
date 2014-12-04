@@ -19,7 +19,7 @@ if (isset($_POST['username']) && isset($_POST['password']) && isset($_POST['emai
     			echo "Duplicate username.<br/><a href='create_user.php'>Back</a>";
     		}
     		else{
-    			$prep = $pdo->prepare('INSERT INTO `players` (`name`, `allnaturalseasalt`, `password`,`email`,`faction`) VALUES (:username, :salt, :password, :email, :faction);');
+    			$prep = $pdo->prepare('INSERT INTO `players` (`name`, `allnaturalseasalt`, `password`,`email`,`faction`, `current_location`) VALUES (:username, :salt, :password, :email, :faction, "1,1,1");');
     			$salt = hash('sha256',uniqid(mt_rand(), true));
     			$password = hash('sha256',$salt.$password);
 

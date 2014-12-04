@@ -1,5 +1,6 @@
 <?php
 // Grab all of the events that are in the morning mail quests:
+require_once('connect.php');
 $result = $dbconn->query('SELECT * FROM events WHERE quest = 0;');
 if ($result){
 	if ( $result->rowCount() != 0 ){
