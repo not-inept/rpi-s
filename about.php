@@ -7,7 +7,11 @@
 
 <body>
 	<div class="container">
-		<?php include './resources/includes/header.php' ?>
+		<?php 
+		$ROOT = "";
+		require_once('./resources/includes/config.php');
+		include './resources/includes/header.php' 
+		?>
 	</div>
 	<div id = "team">
 		<h1>Meet the Team</h1>

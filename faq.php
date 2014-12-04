@@ -1,3 +1,9 @@
+<?php
+	$ROOT = "";
+	require_once('./resources/includes/config.php');
+?>
+
+
 <head>
 	<title>FAQ</title>
 	<link rel="stylesheet" href="resources/css/about.css" type="text/css"/>
