@@ -6,8 +6,8 @@ $dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME']
 
 $stmt = $dbconn->prepare("
 
-     	CREATE DATABASE IF NOT EXISTS `benchd-websysQuiz2` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-      	USE `benchd-websysQuiz2`;
+     	CREATE DATABASE IF NOT EXISTS `rpi-s` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+      	USE `rpi-s`;
       
 	DROP TABLE IF EXISTS `areas`;
 	DROP TABLE IF EXISTS `enemies`;
