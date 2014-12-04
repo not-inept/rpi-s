@@ -5,6 +5,10 @@ require '../resources/includes/config.php';
 $dbconn = new PDO('mysql:host='.$config['DB_HOST'].';dbname='.$config['DB_NAME'], $config['DB_USERNAME'], $config['DB_PASSWORD']);
 
 $stmt = $dbconn->prepare("
+
+     	CREATE DATABASE IF NOT EXISTS `benchd-websysQuiz2` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+      	USE `benchd-websysQuiz2`;
+      
 	DROP TABLE IF EXISTS `areas`;
 	DROP TABLE IF EXISTS `enemies`;
 	DROP TABLE IF EXISTS `enemySpawn`;
