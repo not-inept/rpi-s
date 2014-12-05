@@ -22,4 +22,4 @@ We used HTML5 and CSS3 to style RPI-S. Our site was based on a variety of other 
 
 
 ###JavaScript & jQuery
-Our client-side code is located in `main.js`. This code handles how the user navigates around the map when to hide and show certain UI elements. It keeps track of the players location, determines what actions to follow upon a button click, and the row and column index within the map. Using the row and column index, the navigation buttons are set visible or hidden. The `area.php` file has a specific javascript file with similar functionality as the main javascript file, but altered slightly for different user interactions. 
+Our client-side code is located in `main.js`. This code handles various functions to alter the UI based on the players position. It keeps track of the players location, determines what actions to follow upon a button click, and the row and column index within the map. Using the row and column index, the navigation buttons are set visible or hidden. The `area.php` file has a specific javascript file with similar functionality as the main javascript file, but altered slightly for different user interactions. 
