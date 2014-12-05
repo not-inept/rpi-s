@@ -20,12 +20,13 @@ try {
 
     foreach ($result as $player) {
     	$currentAP = (int) $player['action_points'];
+    	echo "<p> Current points are: $currentAP</p>";
     	$newAP = $currentAP + 5;
     	if ($newAP > 15) {
     		$newAP = 15;
     	}
     	$playerUpdate->execute(array(
-    		':ap' => $newAp,
+    		':ap' => $newAP,
     		':id' => $player['playerID']));
 	}
 }  catch(PDOException $e) {
