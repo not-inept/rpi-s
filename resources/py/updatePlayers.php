@@ -19,7 +19,8 @@ try {
     $playerUpdate = $pdo->prepare('UPDATE `players` SET action_points = :ap WHERE playerID = :id');
 
     foreach ($result as $player) {
-    	$newAP = $player['action_points']+5;
+    	$currentAP = (int) $player['action_points'];
+    	$newAP = $currentAP + 5;
     	if ($newAP > 15) {
     		$newAP = 15;
     	}
