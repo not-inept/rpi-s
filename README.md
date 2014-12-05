@@ -14,8 +14,12 @@ $config = array(
 
 ?>
 ````
-Then install by activating mysql and apache, then loading the "./install/install.php" to install the databases required. If the table/needed data exists they will not be recreated. Instead, the old tables should be dropped before running the installer during an upgrade/re-install.
+To install, start by activating mysql and apache, then loading the `/install/install.php` to install the databases required. If the table/needed data exists they will not be recreated. Instead, the old tables should be dropped before running the installer during an upgrade/re-install.
 
 
-Front-end Design and UI
-We used HTML5 and CSS3 to style RPI-S. Our site was based on a variety of other online game sites, and we decided to make our site similar to old-school games with a slight terminal feel. We put the insert card log-in and the morning news on the top since we want them to be the first things our users will notice when they come to the site. The text output box was made to give off a terminal feel, and the we made the map transparent so it would be similar to maps found on console game menus. The controls were placed on the bottom along with the area description so that the user can get a better idea of where they are on the map first, and then go down to see their options and learn more about the area that they’re in. We made the login-in and sign up screens on different pages to reduce the clutter on our website, since we wanted to keep it minimalistic.
+###Front-end Design and UI
+We used HTML5 and CSS3 to style RPI-S. Our site was based on a variety of other online game sites, and we decided to make our site similar to old-school games with a slight terminal feel. We put the insert card log-in and the morning news on the top since we want them to be the first things our users will notice when they come to the site. The text output box was made to give off a terminal feel, and the we made the map transparent so it would be similar to maps found on console game menus. The controls were placed on the bottom along with the area description so that the user can get a better idea of where they are on the map first, and then go down to see their options and learn more about the area that they're in. We made the login-in and sign up screens on different pages to reduce the clutter on our website, since we wanted to keep it minimalistic.
+
+
+###JavaScript & jQuery
+Our client-side code is located in `main.js`. This code handles how the user navigates around the map when to hide and show certain UI elements. It keeps track of the players location, determines what actions to follow upon a button click, and the row and column index within the map. Using the row and column index, the navigation buttons are set visible or hidden. The `area.php` file has a specific javascript file with similar functionality as the main javascript file, but altered slightly for different user interactions. 
